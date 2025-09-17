@@ -16,4 +16,4 @@ jobs:
         run: |
           docker run -v ${{ github.workspace }}:/project \
             efabless/openlane:latest \
-            bash -c "cd /project && flow.tcl -design my_design"
+            bash -c "cd /project && flow.tcl -design OpenLane_FinalYear"
