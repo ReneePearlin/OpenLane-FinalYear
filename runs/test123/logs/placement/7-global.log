@@ -1,0 +1,80 @@
+OpenROAD 41a51eaf4ca2171c92ff38afb91eb37bbd3f36da 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/picosoc/runs/test123/results/floorplan/picorv32_wrapper.odb'…
+define_corners Typical
+read_liberty -corner Typical /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/openlane/designs/picosoc/runs/test123/tmp/floorplan/3-initial_fp.sdc'…
+[INFO]: Setting RC values...
+[INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
+[INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: 460 2720
+[INFO GPL-0004] CoreAreaLxLy: 5520 10880
+[INFO GPL-0005] CoreAreaUxUy: 536820 541280
+[INFO GPL-0006] NumInstances: 16501
+[INFO GPL-0007] NumPlaceInstances: 12073
+[INFO GPL-0008] NumFixedInstances: 4428
+[INFO GPL-0009] NumDummyInstances: 0
+[INFO GPL-0010] NumNets: 12108
+[INFO GPL-0011] NumPins: 38665
+[INFO GPL-0012] DieAreaLxLy: 0 0
+[INFO GPL-0013] DieAreaUxUy: 542630 553350
+[INFO GPL-0014] CoreAreaLxLy: 5520 10880
+[INFO GPL-0015] CoreAreaUxUy: 536820 541280
+[INFO GPL-0016] CoreArea: 281801520000
+[INFO GPL-0017] NonPlaceInstsArea: 6516249600
+[INFO GPL-0018] PlaceInstsArea: 113034659200
+[INFO GPL-0019] Util(%): 41.06
+[INFO GPL-0020] StdInstsArea: 113034659200
+[INFO GPL-0021] MacroInstsArea: 0
+[InitialPlace]  Iter: 1 CG residual: 0.00022647 HPWL: 147636180
+[InitialPlace]  Iter: 2 CG residual: 0.00001160 HPWL: 141236634
+[InitialPlace]  Iter: 3 CG residual: 0.00009405 HPWL: 141335658
+[InitialPlace]  Iter: 4 CG residual: 0.00000071 HPWL: 141649969
+[InitialPlace]  Iter: 5 CG residual: 0.00000114 HPWL: 141498537
+[INFO GPL-0031] FillerInit: NumGCells: 14803
+[INFO GPL-0032] FillerInit: NumGNets: 12108
+[INFO GPL-0033] FillerInit: NumGPins: 38665
+[INFO GPL-0023] TargetDensity: 0.50
+[INFO GPL-0024] AveragePlaceInstArea: 9362599
+[INFO GPL-0025] IdealBinArea: 18725198
+[INFO GPL-0026] IdealBinCnt: 15049
+[INFO GPL-0027] TotalBinArea: 281801520000
+[INFO GPL-0028] BinCnt: 64 64
+[INFO GPL-0029] BinSize: 8302 8288
+[INFO GPL-0030] NumBins: 4096
+[NesterovSolve] Iter: 1 overflow: 0.976605 HPWL: 71420099
+[NesterovSolve] Iter: 10 overflow: 0.950569 HPWL: 96621584
+[NesterovSolve] Iter: 20 overflow: 0.95052 HPWL: 94927621
+[NesterovSolve] Iter: 30 overflow: 0.950447 HPWL: 95041571
+[NesterovSolve] Iter: 40 overflow: 0.950631 HPWL: 95015768
+[NesterovSolve] Iter: 50 overflow: 0.950638 HPWL: 95043571
+[NesterovSolve] Iter: 60 overflow: 0.95065 HPWL: 95082164
+[NesterovSolve] Iter: 70 overflow: 0.950687 HPWL: 95133382
+[NesterovSolve] Iter: 80 overflow: 0.950697 HPWL: 95179749
+[NesterovSolve] Iter: 90 overflow: 0.950679 HPWL: 95262886
+[NesterovSolve] Iter: 100 overflow: 0.950592 HPWL: 95420929
+[NesterovSolve] Iter: 110 overflow: 0.950401 HPWL: 95779884
+[NesterovSolve] Iter: 120 overflow: 0.950112 HPWL: 96728222
+[NesterovSolve] Iter: 130 overflow: 0.949762 HPWL: 99124899
+[NesterovSolve] Iter: 140 overflow: 0.949036 HPWL: 104034650
+[NesterovSolve] Iter: 150 overflow: 0.947048 HPWL: 112362702
+[NesterovSolve] Iter: 160 overflow: 0.94335 HPWL: 123684849
+[NesterovSolve] Iter: 170 overflow: 0.938964 HPWL: 135321562
+[NesterovSolve] Iter: 180 overflow: 0.931225 HPWL: 147981473
+[NesterovSolve] Iter: 190 overflow: 0.919647 HPWL: 163564952
+[NesterovSolve] Iter: 200 overflow: 0.903732 HPWL: 182476571
+[NesterovSolve] Finished with Overflow: 0.899718
+Setting global connections for newly added cells…
+Writing OpenROAD database to '/openlane/designs/picosoc/runs/test123/tmp/placement/7-global.odb'…
+Writing netlist to '/openlane/designs/picosoc/runs/test123/tmp/placement/7-global.nl.v'…
+Writing powered netlist to '/openlane/designs/picosoc/runs/test123/tmp/placement/7-global.pnl.v'…
+Writing layout to '/openlane/designs/picosoc/runs/test123/tmp/placement/7-global.def'…

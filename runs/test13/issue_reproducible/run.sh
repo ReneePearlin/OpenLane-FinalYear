@@ -1,0 +1,40 @@
+#!/bin/sh
+dir=$(cd -P -- "$(dirname -- "$0")" && pwd -P)
+cd $dir;
+export CLOCK_WIRE_RC_LAYER='met5';
+export CURRENT_DEF='./tmp/placement/7-global.def';
+export CURRENT_NETLIST='./tmp/placement/7-global.nl.v';
+export CURRENT_ODB='./tmp/placement/7-global.odb';
+export CURRENT_POWERED_NETLIST='./tmp/placement/7-global.pnl.v';
+export CURRENT_SDC='./tmp/floorplan/3-initial_fp.sdc';
+export DATA_WIRE_RC_LAYER='met2';
+export DESIGN_NAME='picorv32_wrapper';
+export ESTIMATE_PARASITICS='-placement';
+export FP_PDN_ENABLE_GLOBAL_CONNECTIONS='1';
+export FP_PDN_ENABLE_MACROS_GRID='1';
+export GND_NET='VGND';
+export LIB_FASTEST='pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib';
+export LIB_SLOWEST='pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib';
+export LIB_TYPICAL='pdk/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib';
+export MAX_FANOUT_CONSTRAINT='10';
+export MAX_TRANSITION_CONSTRAINT='0.75';
+export MERGED_LEF='./tmp/merged.nom.lef';
+export OUTPUT_CAP_LOAD='33.442';
+export PACKAGED_SCRIPT_0='openlane/scripts/openroad/sta/multi_corner.tcl';
+export PACKAGED_SCRIPT_1='openlane/scripts/openroad/common/io.tcl';
+export PACKAGED_SCRIPT_2='openlane/scripts/openroad/common/set_rc.tcl';
+export PACKAGED_SCRIPT_3='./tmp/floorplan/3-initial_fp.sdc';
+export PACKAGED_SCRIPT_4='openlane/scripts/openroad/common/set_global_connections.tcl';
+export PROCESS_CORNER='nom';
+export SAVE_LIB='./results/signoff/picorv32_wrapper.lib';
+export SAVE_NETLIST='./out.v';
+export SAVE_SDF='./results/signoff/picorv32_wrapper.sdf';
+export SCRIPTS_DIR='openlane/scripts';
+export STA_MULTICORNER='0';
+export STA_MULTICORNER_READ_LIBS='0';
+export STA_PRE_CTS='1';
+export STD_CELL_GROUND_PINS='VGND VNB';
+export STD_CELL_POWER_PINS='VPWR VPB';
+export VDD_NET='VPWR';
+TOOL_BIN=${TOOL_BIN:-openroad}
+$TOOL_BIN -exit $PACKAGED_SCRIPT_0

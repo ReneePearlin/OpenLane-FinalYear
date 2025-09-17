@@ -1,0 +1,8 @@
+%Error: /openlane/designs/picosoc/src/icebreaker.v:21:8: "icebreaker.v must be read before picosoc.v!"
+   21 | `error "icebreaker.v must be read before picosoc.v!"
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%Warning-REDEFMACRO: /openlane/designs/picosoc/src/icebreaker.v:25:37: Redefining existing define: 'PICOSOC_MEM', with different value: 'ice40up5k_spram'
+                     /openlane/designs/picosoc/src/picosoc.v:264:1: ... Location of previous definition, with value: 'picosoc_mem'
+                     ... For warning description see https://verilator.org/warn/REDEFMACRO?v=5.009
+                     ... Use "/* verilator lint_off REDEFMACRO */" and lint_on around source to disable this message.
+%Error: Exiting due to 1 error(s)

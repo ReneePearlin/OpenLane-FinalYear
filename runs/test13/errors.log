@@ -1,0 +1,38 @@
+[ERROR]: during executing openroad script /openlane/scripts/openroad/sta/multi_corner.tcl
+[ERROR]: Log: designs/picosoc/runs/test13/logs/placement/8-gpl_sta.log
+[ERROR]: Last 10 lines:
+Combinational          1.45e-03   5.82e-04   2.45e-08   2.03e-03  28.5%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  4.92e-03   2.23e-03   3.80e-08   7.15e-03 100.0%
+                          68.8%      31.2%       0.0%
+
+power_report_end
+Error: multi_corner.tcl, 149 can't read "::env(CLOCK_PORT)": no such variable
+child process exited abnormally
+
+[ERROR]: Creating issue reproducible...
+[ERROR]: Step 8 (placement) failed with error:
+-code 1 -level 0 -errorcode NONE -errorinfo {
+    while executing
+"throw_error"
+    (procedure "run_tcl_script" line 219)
+    invoked from within
+"run_tcl_script -tool openroad -no_consume {*}$args"
+    (procedure "run_openroad_script" line 2)
+    invoked from within
+"run_$arg_values(-tool)_script $::env(SCRIPTS_DIR)/openroad/sta/multi_corner.tcl {*}$arg_list"
+    (procedure "run_sta" line 86)
+    invoked from within
+"run_sta -pre_cts -estimate_placement -no_save -log $::env(placement_logs)/gpl_sta.log"
+    (procedure "global_placement_or" line 19)
+    invoked from within
+"global_placement_or"
+    (procedure "run_placement" line 14)
+    invoked from within
+"run_placement"
+    (procedure "run_placement_step" line 8)
+    invoked from within
+"run_placement_step"} -errorline 1
+[ERROR]: Flow failed.

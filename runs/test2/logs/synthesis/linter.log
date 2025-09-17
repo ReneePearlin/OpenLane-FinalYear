@@ -1,0 +1,37 @@
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:62:7: syntax error, unexpected expect
+   62 |  task expect;
+      |       ^~~~~~
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:66:5: syntax error, unexpected $display
+   66 |     $display("ERROR: Got %x (%b) but expected %x (%b).", rdata, rdata, data, data);
+      |     ^~~~~~~~
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:70:2: syntax error, unexpected endtask
+   70 |  endtask
+      |  ^~~~~~~
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:83:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+   83 |    flash_io0_oe = 0;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:114:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+  114 |    flash_io0_oe = 1;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:120:20: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+  120 |     flash_io0_dout = data[7-i];
+      |                    ^
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:137:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+  137 |    flash_io0_oe = 1;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:170:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+  170 |    flash_io0_oe = 0;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:204:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+  204 |    flash_io0_oe = 1;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:232:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+  232 |    flash_io0_oe = 0;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:360:4: syntax error, unexpected $display
+  360 |    $display("FAIL");
+      |    ^~~~~~~~
+%Error: /openlane/designs/picosoc/src/spiflash_tb.v:363:4: syntax error, unexpected $display
+  363 |    $display("PASS");
+      |    ^~~~~~~~
+%Error: Cannot continue

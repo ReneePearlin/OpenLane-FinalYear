@@ -1,0 +1,3369 @@
+OpenROAD 41a51eaf4ca2171c92ff38afb91eb37bbd3f36da 
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO]: Reading ODB at '/openlane/designs/picosoc/runs/test123/tmp/cts/14-picorv32_wrapper.resized.odb'…
+define_corners Slowest Typical Fastest
+read_liberty -corner Slowest /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib
+read_liberty -corner Typical /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_liberty -corner Fastest /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib
+Using 1e-12 for capacitance...
+Using 1e+03 for resistance...
+Using 1e-09 for time...
+Using 1e+00 for voltage...
+Using 1e-03 for current...
+Using 1e-09 for power...
+Using 1e-06 for distance...
+Reading design constraints file at '/openlane/designs/picosoc/runs/test123/tmp/cts/14-picorv32_wrapper.resized.sdc'…
+[INFO]: Setting signal min routing layer to: met1 and clock min routing layer to met3. 
+[INFO]: Setting signal max routing layer to: met5 and clock max routing layer to met5. 
+-congestion_iterations 50 -verbose -congestion_report_file /openlane/designs/picosoc/runs/test123/tmp/routing/resizer-routing-design-congestion.rpt -allow_congestion
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 30%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0043] No OR_DEFAULT vias defined.
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0019] Found 96 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 26
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 22363
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal     124800         61259          50.91%
+met2       Vertical        93600         62581          33.14%
+met3       Horizontal      62400         43262          30.67%
+met4       Vertical        37440         24125          35.56%
+met5       Horizontal      12480          5929          52.49%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove overflow.
+[INFO GRT-0103] Extra Run for hard benchmark.
+[INFO GRT-0197] Via related to pin nodes: 65782
+[INFO GRT-0198] Via related Steiner nodes: 5320
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 137135
+[INFO GRT-0112] Final usage 3D: 781425
+[WARNING GRT-0115] Global routing finished with overflow.
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Overflow
+---------------------------------------------------------------------------------------
+li1                  0         37073            0.00%             3 / 36 / 37073
+met1             61259        138660          226.35%            55 /  3 / 81596
+met2             62581         92935          148.50%             2 / 35 / 34080
+met3             43262         59926          138.52%            19 /  2 / 21783
+met4             24125         34123          141.44%             2 / 14 / 13896
+met5              5929          7303          123.17%             6 /  1 / 2458
+---------------------------------------------------------------------------------------
+Total           197156        370020          187.68%            87 / 91 / 190886
+
+[INFO GRT-0018] Total wirelength: 3185812 um
+[INFO GRT-0014] Routed nets: 12320
+[INFO]: Setting RC values...
+[WARNING GRT-0026] Missing route to pin _10674_/A.
+[WARNING GRT-0026] Missing route to pin _10674_/A.
+[WARNING GRT-0026] Missing route to pin _10674_/A.
+[WARNING GRT-0026] Missing route to pin _22244_/D.
+[WARNING GRT-0026] Missing route to pin _22244_/D.
+[WARNING GRT-0026] Missing route to pin _22244_/D.
+[WARNING GRT-0026] Missing route to pin _22487_/D.
+[WARNING GRT-0026] Missing route to pin _22487_/D.
+[WARNING GRT-0026] Missing route to pin _22487_/D.
+[WARNING GRT-0026] Missing route to pin _21722_/D.
+[WARNING GRT-0026] Missing route to pin _21722_/D.
+[WARNING GRT-0026] Missing route to pin _21722_/D.
+[WARNING GRT-0026] Missing route to pin _21723_/D.
+[WARNING GRT-0026] Missing route to pin _21723_/D.
+[WARNING GRT-0026] Missing route to pin _21723_/D.
+[WARNING GRT-0026] Missing route to pin _12532_/Y.
+[WARNING GRT-0026] Missing route to pin _12532_/Y.
+[WARNING GRT-0026] Missing route to pin _12532_/Y.
+[WARNING GRT-0026] Missing route to pin _20974_/D.
+[WARNING GRT-0026] Missing route to pin _20974_/D.
+[WARNING GRT-0026] Missing route to pin _20974_/D.
+[WARNING GRT-0026] Missing route to pin _12570_/X.
+[WARNING GRT-0026] Missing route to pin _12570_/X.
+[WARNING GRT-0026] Missing route to pin _12570_/X.
+[WARNING GRT-0026] Missing route to pin _20999_/D.
+[WARNING GRT-0026] Missing route to pin _20999_/D.
+[WARNING GRT-0026] Missing route to pin _20999_/D.
+[WARNING GRT-0026] Missing route to pin _21003_/D.
+[WARNING GRT-0026] Missing route to pin _21003_/D.
+[WARNING GRT-0026] Missing route to pin _21003_/D.
+[WARNING GRT-0026] Missing route to pin _21018_/D.
+[WARNING GRT-0026] Missing route to pin _21018_/D.
+[WARNING GRT-0026] Missing route to pin _21018_/D.
+[WARNING GRT-0026] Missing route to pin _21021_/D.
+[WARNING GRT-0026] Missing route to pin _21021_/D.
+[WARNING GRT-0026] Missing route to pin _21021_/D.
+[WARNING GRT-0026] Missing route to pin _12803_/Y.
+[WARNING GRT-0026] Missing route to pin _12803_/Y.
+[WARNING GRT-0026] Missing route to pin _12803_/Y.
+[WARNING GRT-0026] Missing route to pin _12886_/Y.
+[WARNING GRT-0026] Missing route to pin _12886_/Y.
+[WARNING GRT-0026] Missing route to pin _12886_/Y.
+[WARNING GRT-0026] Missing route to pin _13189_/Y.
+[WARNING GRT-0026] Missing route to pin _13189_/Y.
+[WARNING GRT-0026] Missing route to pin _13189_/Y.
+[WARNING GRT-0026] Missing route to pin _13270_/Y.
+[WARNING GRT-0026] Missing route to pin _13270_/Y.
+[WARNING GRT-0026] Missing route to pin _13270_/Y.
+[WARNING GRT-0026] Missing route to pin _21065_/D.
+[WARNING GRT-0026] Missing route to pin _13579_/Y.
+[WARNING GRT-0026] Missing route to pin _21065_/D.
+[WARNING GRT-0026] Missing route to pin _13579_/Y.
+[WARNING GRT-0026] Missing route to pin _21065_/D.
+[WARNING GRT-0026] Missing route to pin _13579_/Y.
+[WARNING GRT-0026] Missing route to pin _13631_/Y.
+[WARNING GRT-0026] Missing route to pin _13631_/Y.
+[WARNING GRT-0026] Missing route to pin _13631_/Y.
+[WARNING GRT-0026] Missing route to pin _21068_/D.
+[WARNING GRT-0026] Missing route to pin _21068_/D.
+[WARNING GRT-0026] Missing route to pin _21068_/D.
+[WARNING GRT-0026] Missing route to pin _13777_/X.
+[WARNING GRT-0026] Missing route to pin _13777_/X.
+[WARNING GRT-0026] Missing route to pin _13777_/X.
+[WARNING GRT-0026] Missing route to pin _21115_/D.
+[WARNING GRT-0026] Missing route to pin _21115_/D.
+[WARNING GRT-0026] Missing route to pin _21115_/D.
+[WARNING GRT-0026] Missing route to pin _13810_/X.
+[WARNING GRT-0026] Missing route to pin _13810_/X.
+[WARNING GRT-0026] Missing route to pin _13810_/X.
+[WARNING GRT-0026] Missing route to pin _13837_/X.
+[WARNING GRT-0026] Missing route to pin _13837_/X.
+[WARNING GRT-0026] Missing route to pin _13837_/X.
+[WARNING GRT-0026] Missing route to pin _13911_/Y.
+[WARNING GRT-0026] Missing route to pin _13911_/Y.
+[WARNING GRT-0026] Missing route to pin _13911_/Y.
+[WARNING GRT-0026] Missing route to pin _21144_/D.
+[WARNING GRT-0026] Missing route to pin _21144_/D.
+[WARNING GRT-0026] Missing route to pin _21144_/D.
+[WARNING GRT-0026] Missing route to pin _13948_/Y.
+[WARNING GRT-0026] Missing route to pin _13948_/Y.
+[WARNING GRT-0026] Missing route to pin _13948_/Y.
+[WARNING GRT-0026] Missing route to pin _21152_/D.
+[WARNING GRT-0026] Missing route to pin _21152_/D.
+[WARNING GRT-0026] Missing route to pin _21152_/D.
+[WARNING GRT-0026] Missing route to pin _14773_/Y.
+[WARNING GRT-0026] Missing route to pin _14773_/Y.
+[WARNING GRT-0026] Missing route to pin _14773_/Y.
+[WARNING GRT-0026] Missing route to pin _14821_/Y.
+[WARNING GRT-0026] Missing route to pin _14821_/Y.
+[WARNING GRT-0026] Missing route to pin _14821_/Y.
+[WARNING GRT-0026] Missing route to pin _21177_/D.
+[WARNING GRT-0026] Missing route to pin _21177_/D.
+[WARNING GRT-0026] Missing route to pin _21177_/D.
+[WARNING GRT-0026] Missing route to pin _21179_/D.
+[WARNING GRT-0026] Missing route to pin _21179_/D.
+[WARNING GRT-0026] Missing route to pin _21179_/D.
+[WARNING GRT-0026] Missing route to pin _15135_/Y.
+[WARNING GRT-0026] Missing route to pin _15135_/Y.
+[WARNING GRT-0026] Missing route to pin _15135_/Y.
+[WARNING GRT-0026] Missing route to pin _15241_/Y.
+[WARNING GRT-0026] Missing route to pin _15241_/Y.
+[WARNING GRT-0026] Missing route to pin _15241_/Y.
+[WARNING GRT-0026] Missing route to pin _15537_/Y.
+[WARNING GRT-0026] Missing route to pin _15537_/Y.
+[WARNING GRT-0026] Missing route to pin _15537_/Y.
+[WARNING GRT-0026] Missing route to pin _21195_/D.
+[WARNING GRT-0026] Missing route to pin _21195_/D.
+[WARNING GRT-0026] Missing route to pin _21195_/D.
+[WARNING GRT-0026] Missing route to pin _15771_/X.
+[WARNING GRT-0026] Missing route to pin _15771_/X.
+[WARNING GRT-0026] Missing route to pin _15771_/X.
+[WARNING GRT-0026] Missing route to pin _21208_/D.
+[WARNING GRT-0026] Missing route to pin _21208_/D.
+[WARNING GRT-0026] Missing route to pin _21208_/D.
+[WARNING GRT-0026] Missing route to pin _15866_/X.
+[WARNING GRT-0026] Missing route to pin _15866_/X.
+[WARNING GRT-0026] Missing route to pin _15866_/X.
+[WARNING GRT-0026] Missing route to pin _15886_/X.
+[WARNING GRT-0026] Missing route to pin _15886_/X.
+[WARNING GRT-0026] Missing route to pin _15886_/X.
+[WARNING GRT-0026] Missing route to pin _21220_/D.
+[WARNING GRT-0026] Missing route to pin _21220_/D.
+[WARNING GRT-0026] Missing route to pin _21220_/D.
+[WARNING GRT-0026] Missing route to pin _15969_/Y.
+[WARNING GRT-0026] Missing route to pin _15969_/Y.
+[WARNING GRT-0026] Missing route to pin _15969_/Y.
+[WARNING GRT-0026] Missing route to pin _15987_/Y.
+[WARNING GRT-0026] Missing route to pin _15987_/Y.
+[WARNING GRT-0026] Missing route to pin _15987_/Y.
+[WARNING GRT-0026] Missing route to pin _21230_/D.
+[WARNING GRT-0026] Missing route to pin _21230_/D.
+[WARNING GRT-0026] Missing route to pin _21230_/D.
+[WARNING GRT-0026] Missing route to pin _21231_/D.
+[WARNING GRT-0026] Missing route to pin _21231_/D.
+[WARNING GRT-0026] Missing route to pin _21231_/D.
+[WARNING GRT-0026] Missing route to pin _21245_/D.
+[WARNING GRT-0026] Missing route to pin _21245_/D.
+[WARNING GRT-0026] Missing route to pin _21245_/D.
+[WARNING GRT-0026] Missing route to pin _16078_/Y.
+[WARNING GRT-0026] Missing route to pin _16078_/Y.
+[WARNING GRT-0026] Missing route to pin _16078_/Y.
+[WARNING GRT-0026] Missing route to pin _21270_/D.
+[WARNING GRT-0026] Missing route to pin _21270_/D.
+[WARNING GRT-0026] Missing route to pin _21270_/D.
+[WARNING GRT-0026] Missing route to pin _16236_/X.
+[WARNING GRT-0026] Missing route to pin _16236_/X.
+[WARNING GRT-0026] Missing route to pin _16236_/X.
+[WARNING GRT-0026] Missing route to pin _16238_/X.
+[WARNING GRT-0026] Missing route to pin _16238_/X.
+[WARNING GRT-0026] Missing route to pin _16238_/X.
+[WARNING GRT-0026] Missing route to pin _16248_/Y.
+[WARNING GRT-0026] Missing route to pin _16248_/Y.
+[WARNING GRT-0026] Missing route to pin _16248_/Y.
+[WARNING GRT-0026] Missing route to pin _16283_/Y.
+[WARNING GRT-0026] Missing route to pin _16283_/Y.
+[WARNING GRT-0026] Missing route to pin _16283_/Y.
+[WARNING GRT-0026] Missing route to pin _21296_/D.
+[WARNING GRT-0026] Missing route to pin _16290_/X.
+[WARNING GRT-0026] Missing route to pin _21296_/D.
+[WARNING GRT-0026] Missing route to pin _16290_/X.
+[WARNING GRT-0026] Missing route to pin _21296_/D.
+[WARNING GRT-0026] Missing route to pin _16290_/X.
+[WARNING GRT-0026] Missing route to pin _16293_/X.
+[WARNING GRT-0026] Missing route to pin _16293_/X.
+[WARNING GRT-0026] Missing route to pin _16293_/X.
+[WARNING GRT-0026] Missing route to pin _21303_/D.
+[WARNING GRT-0026] Missing route to pin _21303_/D.
+[WARNING GRT-0026] Missing route to pin _21303_/D.
+[WARNING GRT-0026] Missing route to pin _16321_/X.
+[WARNING GRT-0026] Missing route to pin _16321_/X.
+[WARNING GRT-0026] Missing route to pin _16321_/X.
+[WARNING GRT-0026] Missing route to pin _21311_/D.
+[WARNING GRT-0026] Missing route to pin _16323_/X.
+[WARNING GRT-0026] Missing route to pin _21311_/D.
+[WARNING GRT-0026] Missing route to pin _16323_/X.
+[WARNING GRT-0026] Missing route to pin _21311_/D.
+[WARNING GRT-0026] Missing route to pin _16323_/X.
+[WARNING GRT-0026] Missing route to pin _21312_/D.
+[WARNING GRT-0026] Missing route to pin _21312_/D.
+[WARNING GRT-0026] Missing route to pin _21312_/D.
+[WARNING GRT-0026] Missing route to pin _16333_/Y.
+[WARNING GRT-0026] Missing route to pin _16333_/Y.
+[WARNING GRT-0026] Missing route to pin _16333_/Y.
+[WARNING GRT-0026] Missing route to pin _21316_/D.
+[WARNING GRT-0026] Missing route to pin _21316_/D.
+[WARNING GRT-0026] Missing route to pin _21316_/D.
+[WARNING GRT-0026] Missing route to pin _21318_/D.
+[WARNING GRT-0026] Missing route to pin _21318_/D.
+[WARNING GRT-0026] Missing route to pin _21318_/D.
+[WARNING GRT-0026] Missing route to pin _16362_/Y.
+[WARNING GRT-0026] Missing route to pin _16362_/Y.
+[WARNING GRT-0026] Missing route to pin _16362_/Y.
+[WARNING GRT-0026] Missing route to pin _16371_/Y.
+[WARNING GRT-0026] Missing route to pin _16371_/Y.
+[WARNING GRT-0026] Missing route to pin _16371_/Y.
+[WARNING GRT-0026] Missing route to pin _16393_/X.
+[WARNING GRT-0026] Missing route to pin _16393_/X.
+[WARNING GRT-0026] Missing route to pin _16393_/X.
+[WARNING GRT-0026] Missing route to pin _21335_/D.
+[WARNING GRT-0026] Missing route to pin _16395_/X.
+[WARNING GRT-0026] Missing route to pin _21335_/D.
+[WARNING GRT-0026] Missing route to pin _16395_/X.
+[WARNING GRT-0026] Missing route to pin _21335_/D.
+[WARNING GRT-0026] Missing route to pin _16395_/X.
+[WARNING GRT-0026] Missing route to pin _16407_/X.
+[WARNING GRT-0026] Missing route to pin _16407_/X.
+[WARNING GRT-0026] Missing route to pin _16407_/X.
+[WARNING GRT-0026] Missing route to pin _21351_/D.
+[WARNING GRT-0026] Missing route to pin _21351_/D.
+[WARNING GRT-0026] Missing route to pin _21351_/D.
+[WARNING GRT-0026] Missing route to pin _21352_/D.
+[WARNING GRT-0026] Missing route to pin _21352_/D.
+[WARNING GRT-0026] Missing route to pin _21352_/D.
+[WARNING GRT-0026] Missing route to pin _16581_/X.
+[WARNING GRT-0026] Missing route to pin _16581_/X.
+[WARNING GRT-0026] Missing route to pin _16581_/X.
+[WARNING GRT-0026] Missing route to pin _16588_/X.
+[WARNING GRT-0026] Missing route to pin _16588_/X.
+[WARNING GRT-0026] Missing route to pin _16588_/X.
+[WARNING GRT-0026] Missing route to pin _21399_/D.
+[WARNING GRT-0026] Missing route to pin _21399_/D.
+[WARNING GRT-0026] Missing route to pin _21399_/D.
+[WARNING GRT-0026] Missing route to pin _21406_/D.
+[WARNING GRT-0026] Missing route to pin _16612_/X.
+[WARNING GRT-0026] Missing route to pin _21406_/D.
+[WARNING GRT-0026] Missing route to pin _16612_/X.
+[WARNING GRT-0026] Missing route to pin _21406_/D.
+[WARNING GRT-0026] Missing route to pin _16612_/X.
+[WARNING GRT-0026] Missing route to pin _21409_/D.
+[WARNING GRT-0026] Missing route to pin _21409_/D.
+[WARNING GRT-0026] Missing route to pin _21409_/D.
+[WARNING GRT-0026] Missing route to pin _16620_/X.
+[WARNING GRT-0026] Missing route to pin _16620_/X.
+[WARNING GRT-0026] Missing route to pin _16620_/X.
+[WARNING GRT-0026] Missing route to pin _16657_/Y.
+[WARNING GRT-0026] Missing route to pin _16657_/Y.
+[WARNING GRT-0026] Missing route to pin _16657_/Y.
+[WARNING GRT-0026] Missing route to pin _16663_/Y.
+[WARNING GRT-0026] Missing route to pin _16663_/Y.
+[WARNING GRT-0026] Missing route to pin _16663_/Y.
+[WARNING GRT-0026] Missing route to pin _21424_/D.
+[WARNING GRT-0026] Missing route to pin _21424_/D.
+[WARNING GRT-0026] Missing route to pin _21424_/D.
+[WARNING GRT-0026] Missing route to pin _21426_/D.
+[WARNING GRT-0026] Missing route to pin _21426_/D.
+[WARNING GRT-0026] Missing route to pin _21426_/D.
+[WARNING GRT-0026] Missing route to pin _11093_/B1.
+[WARNING GRT-0026] Missing route to pin _11093_/B1.
+[WARNING GRT-0026] Missing route to pin _11093_/B1.
+[WARNING GRT-0026] Missing route to pin _16747_/X.
+[WARNING GRT-0026] Missing route to pin _16747_/X.
+[WARNING GRT-0026] Missing route to pin _16747_/X.
+[WARNING GRT-0026] Missing route to pin _21472_/D.
+[WARNING GRT-0026] Missing route to pin _16760_/X.
+[WARNING GRT-0026] Missing route to pin _21472_/D.
+[WARNING GRT-0026] Missing route to pin _16760_/X.
+[WARNING GRT-0026] Missing route to pin _21472_/D.
+[WARNING GRT-0026] Missing route to pin _16760_/X.
+[WARNING GRT-0026] Missing route to pin _21474_/D.
+[WARNING GRT-0026] Missing route to pin _16766_/X.
+[WARNING GRT-0026] Missing route to pin _21474_/D.
+[WARNING GRT-0026] Missing route to pin _16766_/X.
+[WARNING GRT-0026] Missing route to pin _21474_/D.
+[WARNING GRT-0026] Missing route to pin _16766_/X.
+[WARNING GRT-0026] Missing route to pin _21475_/D.
+[WARNING GRT-0026] Missing route to pin _21475_/D.
+[WARNING GRT-0026] Missing route to pin _21475_/D.
+[WARNING GRT-0026] Missing route to pin _16780_/X.
+[WARNING GRT-0026] Missing route to pin _16780_/X.
+[WARNING GRT-0026] Missing route to pin _16780_/X.
+[WARNING GRT-0026] Missing route to pin _21486_/D.
+[WARNING GRT-0026] Missing route to pin _16806_/Y.
+[WARNING GRT-0026] Missing route to pin _21486_/D.
+[WARNING GRT-0026] Missing route to pin _16806_/Y.
+[WARNING GRT-0026] Missing route to pin _21486_/D.
+[WARNING GRT-0026] Missing route to pin _16806_/Y.
+[WARNING GRT-0026] Missing route to pin _21493_/D.
+[WARNING GRT-0026] Missing route to pin _21493_/D.
+[WARNING GRT-0026] Missing route to pin _21493_/D.
+[WARNING GRT-0026] Missing route to pin _21497_/D.
+[WARNING GRT-0026] Missing route to pin _21497_/D.
+[WARNING GRT-0026] Missing route to pin _21497_/D.
+[WARNING GRT-0026] Missing route to pin _21499_/D.
+[WARNING GRT-0026] Missing route to pin _21499_/D.
+[WARNING GRT-0026] Missing route to pin _21499_/D.
+[WARNING GRT-0026] Missing route to pin _16874_/X.
+[WARNING GRT-0026] Missing route to pin _16874_/X.
+[WARNING GRT-0026] Missing route to pin _16874_/X.
+[WARNING GRT-0026] Missing route to pin _16889_/X.
+[WARNING GRT-0026] Missing route to pin _16889_/X.
+[WARNING GRT-0026] Missing route to pin _16889_/X.
+[WARNING GRT-0026] Missing route to pin _21513_/D.
+[WARNING GRT-0026] Missing route to pin _21513_/D.
+[WARNING GRT-0026] Missing route to pin _21513_/D.
+[WARNING GRT-0026] Missing route to pin _16901_/X.
+[WARNING GRT-0026] Missing route to pin _16901_/X.
+[WARNING GRT-0026] Missing route to pin _16901_/X.
+[WARNING GRT-0026] Missing route to pin _21515_/D.
+[WARNING GRT-0026] Missing route to pin _21515_/D.
+[WARNING GRT-0026] Missing route to pin _21515_/D.
+[WARNING GRT-0026] Missing route to pin _21528_/D.
+[WARNING GRT-0026] Missing route to pin _16942_/Y.
+[WARNING GRT-0026] Missing route to pin _21528_/D.
+[WARNING GRT-0026] Missing route to pin _16942_/Y.
+[WARNING GRT-0026] Missing route to pin _21528_/D.
+[WARNING GRT-0026] Missing route to pin _16942_/Y.
+[WARNING GRT-0026] Missing route to pin _16951_/Y.
+[WARNING GRT-0026] Missing route to pin _16951_/Y.
+[WARNING GRT-0026] Missing route to pin _16951_/Y.
+[WARNING GRT-0026] Missing route to pin _16962_/X.
+[WARNING GRT-0026] Missing route to pin _16962_/X.
+[WARNING GRT-0026] Missing route to pin _16962_/X.
+[WARNING GRT-0026] Missing route to pin _16967_/Y.
+[WARNING GRT-0026] Missing route to pin _16967_/Y.
+[WARNING GRT-0026] Missing route to pin _16967_/Y.
+[WARNING GRT-0026] Missing route to pin _21535_/D.
+[WARNING GRT-0026] Missing route to pin _21535_/D.
+[WARNING GRT-0026] Missing route to pin _21535_/D.
+[WARNING GRT-0026] Missing route to pin _21536_/D.
+[WARNING GRT-0026] Missing route to pin _16975_/Y.
+[WARNING GRT-0026] Missing route to pin _21536_/D.
+[WARNING GRT-0026] Missing route to pin _16975_/Y.
+[WARNING GRT-0026] Missing route to pin _21536_/D.
+[WARNING GRT-0026] Missing route to pin _16975_/Y.
+[WARNING GRT-0026] Missing route to pin _17004_/Y.
+[WARNING GRT-0026] Missing route to pin _17004_/Y.
+[WARNING GRT-0026] Missing route to pin _17004_/Y.
+[WARNING GRT-0026] Missing route to pin _17013_/Y.
+[WARNING GRT-0026] Missing route to pin _17013_/Y.
+[WARNING GRT-0026] Missing route to pin _17013_/Y.
+[WARNING GRT-0026] Missing route to pin _21558_/D.
+[WARNING GRT-0026] Missing route to pin _21558_/D.
+[WARNING GRT-0026] Missing route to pin _21558_/D.
+[WARNING GRT-0026] Missing route to pin _21559_/D.
+[WARNING GRT-0026] Missing route to pin _21559_/D.
+[WARNING GRT-0026] Missing route to pin _21559_/D.
+[WARNING GRT-0026] Missing route to pin _17249_/X.
+[WARNING GRT-0026] Missing route to pin _17249_/X.
+[WARNING GRT-0026] Missing route to pin _17249_/X.
+[WARNING GRT-0026] Missing route to pin _21565_/D.
+[WARNING GRT-0026] Missing route to pin _21565_/D.
+[WARNING GRT-0026] Missing route to pin _21565_/D.
+[WARNING GRT-0026] Missing route to pin _21567_/D.
+[WARNING GRT-0026] Missing route to pin _21567_/D.
+[WARNING GRT-0026] Missing route to pin _21567_/D.
+[WARNING GRT-0026] Missing route to pin _21569_/D.
+[WARNING GRT-0026] Missing route to pin _21569_/D.
+[WARNING GRT-0026] Missing route to pin _21569_/D.
+[WARNING GRT-0026] Missing route to pin _21575_/D.
+[WARNING GRT-0026] Missing route to pin _21575_/D.
+[WARNING GRT-0026] Missing route to pin _21575_/D.
+[WARNING GRT-0026] Missing route to pin _21578_/D.
+[WARNING GRT-0026] Missing route to pin _21578_/D.
+[WARNING GRT-0026] Missing route to pin _21578_/D.
+[WARNING GRT-0026] Missing route to pin _21581_/D.
+[WARNING GRT-0026] Missing route to pin _21581_/D.
+[WARNING GRT-0026] Missing route to pin _21581_/D.
+[WARNING GRT-0026] Missing route to pin _21591_/D.
+[WARNING GRT-0026] Missing route to pin _18389_/Y.
+[WARNING GRT-0026] Missing route to pin _21591_/D.
+[WARNING GRT-0026] Missing route to pin _18389_/Y.
+[WARNING GRT-0026] Missing route to pin _21591_/D.
+[WARNING GRT-0026] Missing route to pin _18389_/Y.
+[WARNING GRT-0026] Missing route to pin _21602_/D.
+[WARNING GRT-0026] Missing route to pin _21602_/D.
+[WARNING GRT-0026] Missing route to pin _21602_/D.
+[WARNING GRT-0026] Missing route to pin _21603_/D.
+[WARNING GRT-0026] Missing route to pin _21603_/D.
+[WARNING GRT-0026] Missing route to pin _21603_/D.
+[WARNING GRT-0026] Missing route to pin _21604_/D.
+[WARNING GRT-0026] Missing route to pin _21604_/D.
+[WARNING GRT-0026] Missing route to pin _21604_/D.
+[WARNING GRT-0026] Missing route to pin _21605_/D.
+[WARNING GRT-0026] Missing route to pin _21605_/D.
+[WARNING GRT-0026] Missing route to pin _21605_/D.
+[WARNING GRT-0026] Missing route to pin _18435_/X.
+[WARNING GRT-0026] Missing route to pin _18435_/X.
+[WARNING GRT-0026] Missing route to pin _18435_/X.
+[WARNING GRT-0026] Missing route to pin _21609_/D.
+[WARNING GRT-0026] Missing route to pin _18441_/X.
+[WARNING GRT-0026] Missing route to pin _21609_/D.
+[WARNING GRT-0026] Missing route to pin _18441_/X.
+[WARNING GRT-0026] Missing route to pin _21609_/D.
+[WARNING GRT-0026] Missing route to pin _18441_/X.
+[WARNING GRT-0026] Missing route to pin _21611_/D.
+[WARNING GRT-0026] Missing route to pin _21611_/D.
+[WARNING GRT-0026] Missing route to pin _21611_/D.
+[WARNING GRT-0026] Missing route to pin _21615_/D.
+[WARNING GRT-0026] Missing route to pin _18458_/Y.
+[WARNING GRT-0026] Missing route to pin _21615_/D.
+[WARNING GRT-0026] Missing route to pin _18458_/Y.
+[WARNING GRT-0026] Missing route to pin _21615_/D.
+[WARNING GRT-0026] Missing route to pin _18458_/Y.
+[WARNING GRT-0026] Missing route to pin _21622_/D.
+[WARNING GRT-0026] Missing route to pin _21622_/D.
+[WARNING GRT-0026] Missing route to pin _21622_/D.
+[WARNING GRT-0026] Missing route to pin _18505_/X.
+[WARNING GRT-0026] Missing route to pin _18505_/X.
+[WARNING GRT-0026] Missing route to pin _18505_/X.
+[WARNING GRT-0026] Missing route to pin _21633_/D.
+[WARNING GRT-0026] Missing route to pin _21633_/D.
+[WARNING GRT-0026] Missing route to pin _21633_/D.
+[WARNING GRT-0026] Missing route to pin _18525_/X.
+[WARNING GRT-0026] Missing route to pin _18525_/X.
+[WARNING GRT-0026] Missing route to pin _18525_/X.
+[WARNING GRT-0026] Missing route to pin _21641_/D.
+[WARNING GRT-0026] Missing route to pin _18529_/X.
+[WARNING GRT-0026] Missing route to pin _21641_/D.
+[WARNING GRT-0026] Missing route to pin _18529_/X.
+[WARNING GRT-0026] Missing route to pin _21641_/D.
+[WARNING GRT-0026] Missing route to pin _18529_/X.
+[WARNING GRT-0026] Missing route to pin _21642_/D.
+[WARNING GRT-0026] Missing route to pin _21642_/D.
+[WARNING GRT-0026] Missing route to pin _21642_/D.
+[WARNING GRT-0026] Missing route to pin _18569_/Y.
+[WARNING GRT-0026] Missing route to pin _18569_/Y.
+[WARNING GRT-0026] Missing route to pin _18569_/Y.
+[WARNING GRT-0026] Missing route to pin _18585_/X.
+[WARNING GRT-0026] Missing route to pin _18585_/X.
+[WARNING GRT-0026] Missing route to pin _18585_/X.
+[WARNING GRT-0026] Missing route to pin _21664_/D.
+[WARNING GRT-0026] Missing route to pin _21664_/D.
+[WARNING GRT-0026] Missing route to pin _21664_/D.
+[WARNING GRT-0026] Missing route to pin _18598_/X.
+[WARNING GRT-0026] Missing route to pin _18598_/X.
+[WARNING GRT-0026] Missing route to pin _18598_/X.
+[WARNING GRT-0026] Missing route to pin _21668_/D.
+[WARNING GRT-0026] Missing route to pin _18604_/X.
+[WARNING GRT-0026] Missing route to pin _21668_/D.
+[WARNING GRT-0026] Missing route to pin _18604_/X.
+[WARNING GRT-0026] Missing route to pin _21668_/D.
+[WARNING GRT-0026] Missing route to pin _18604_/X.
+[WARNING GRT-0026] Missing route to pin _21669_/D.
+[WARNING GRT-0026] Missing route to pin _21669_/D.
+[WARNING GRT-0026] Missing route to pin _21669_/D.
+[WARNING GRT-0026] Missing route to pin _18610_/X.
+[WARNING GRT-0026] Missing route to pin _18610_/X.
+[WARNING GRT-0026] Missing route to pin _18610_/X.
+[WARNING GRT-0026] Missing route to pin _21671_/D.
+[WARNING GRT-0026] Missing route to pin _21671_/D.
+[WARNING GRT-0026] Missing route to pin _21671_/D.
+[WARNING GRT-0026] Missing route to pin _21674_/D.
+[WARNING GRT-0026] Missing route to pin _18618_/X.
+[WARNING GRT-0026] Missing route to pin _21674_/D.
+[WARNING GRT-0026] Missing route to pin _18618_/X.
+[WARNING GRT-0026] Missing route to pin _21674_/D.
+[WARNING GRT-0026] Missing route to pin _18618_/X.
+[WARNING GRT-0026] Missing route to pin _21679_/D.
+[WARNING GRT-0026] Missing route to pin _18633_/Y.
+[WARNING GRT-0026] Missing route to pin _21679_/D.
+[WARNING GRT-0026] Missing route to pin _18633_/Y.
+[WARNING GRT-0026] Missing route to pin _21679_/D.
+[WARNING GRT-0026] Missing route to pin _18633_/Y.
+[WARNING GRT-0026] Missing route to pin _18636_/Y.
+[WARNING GRT-0026] Missing route to pin _18636_/Y.
+[WARNING GRT-0026] Missing route to pin _18636_/Y.
+[WARNING GRT-0026] Missing route to pin _18642_/Y.
+[WARNING GRT-0026] Missing route to pin _18642_/Y.
+[WARNING GRT-0026] Missing route to pin _18642_/Y.
+[WARNING GRT-0026] Missing route to pin _21691_/D.
+[WARNING GRT-0026] Missing route to pin _21691_/D.
+[WARNING GRT-0026] Missing route to pin _21691_/D.
+[WARNING GRT-0026] Missing route to pin _21700_/D.
+[WARNING GRT-0026] Missing route to pin _21700_/D.
+[WARNING GRT-0026] Missing route to pin _21700_/D.
+[WARNING GRT-0026] Missing route to pin _21701_/D.
+[WARNING GRT-0026] Missing route to pin _21701_/D.
+[WARNING GRT-0026] Missing route to pin _21701_/D.
+[WARNING GRT-0026] Missing route to pin _21702_/D.
+[WARNING GRT-0026] Missing route to pin _21702_/D.
+[WARNING GRT-0026] Missing route to pin _21702_/D.
+[WARNING GRT-0026] Missing route to pin _21709_/D.
+[WARNING GRT-0026] Missing route to pin _18734_/X.
+[WARNING GRT-0026] Missing route to pin _21709_/D.
+[WARNING GRT-0026] Missing route to pin _18734_/X.
+[WARNING GRT-0026] Missing route to pin _21709_/D.
+[WARNING GRT-0026] Missing route to pin _18734_/X.
+[WARNING GRT-0026] Missing route to pin _21712_/D.
+[WARNING GRT-0026] Missing route to pin _21712_/D.
+[WARNING GRT-0026] Missing route to pin _21712_/D.
+[WARNING GRT-0026] Missing route to pin _21714_/D.
+[WARNING GRT-0026] Missing route to pin _21714_/D.
+[WARNING GRT-0026] Missing route to pin _21714_/D.
+[WARNING GRT-0026] Missing route to pin _21715_/D.
+[WARNING GRT-0026] Missing route to pin _21715_/D.
+[WARNING GRT-0026] Missing route to pin _21715_/D.
+[WARNING GRT-0026] Missing route to pin _21724_/D.
+[WARNING GRT-0026] Missing route to pin _21724_/D.
+[WARNING GRT-0026] Missing route to pin _21724_/D.
+[WARNING GRT-0026] Missing route to pin _21725_/D.
+[WARNING GRT-0026] Missing route to pin _21725_/D.
+[WARNING GRT-0026] Missing route to pin _21725_/D.
+[WARNING GRT-0026] Missing route to pin _21727_/D.
+[WARNING GRT-0026] Missing route to pin _21727_/D.
+[WARNING GRT-0026] Missing route to pin _21727_/D.
+[WARNING GRT-0026] Missing route to pin _21733_/D.
+[WARNING GRT-0026] Missing route to pin _21733_/D.
+[WARNING GRT-0026] Missing route to pin _21733_/D.
+[WARNING GRT-0026] Missing route to pin _21736_/D.
+[WARNING GRT-0026] Missing route to pin _21736_/D.
+[WARNING GRT-0026] Missing route to pin _21736_/D.
+[WARNING GRT-0026] Missing route to pin _18822_/X.
+[WARNING GRT-0026] Missing route to pin _18822_/X.
+[WARNING GRT-0026] Missing route to pin _18822_/X.
+[WARNING GRT-0026] Missing route to pin _21740_/D.
+[WARNING GRT-0026] Missing route to pin _21740_/D.
+[WARNING GRT-0026] Missing route to pin _21740_/D.
+[WARNING GRT-0026] Missing route to pin _21742_/D.
+[WARNING GRT-0026] Missing route to pin _18836_/X.
+[WARNING GRT-0026] Missing route to pin _21742_/D.
+[WARNING GRT-0026] Missing route to pin _18836_/X.
+[WARNING GRT-0026] Missing route to pin _21742_/D.
+[WARNING GRT-0026] Missing route to pin _18836_/X.
+[WARNING GRT-0026] Missing route to pin _21743_/D.
+[WARNING GRT-0026] Missing route to pin _21743_/D.
+[WARNING GRT-0026] Missing route to pin _21743_/D.
+[WARNING GRT-0026] Missing route to pin _21744_/D.
+[WARNING GRT-0026] Missing route to pin _21744_/D.
+[WARNING GRT-0026] Missing route to pin _21744_/D.
+[WARNING GRT-0026] Missing route to pin _18846_/X.
+[WARNING GRT-0026] Missing route to pin _18846_/X.
+[WARNING GRT-0026] Missing route to pin _18846_/X.
+[WARNING GRT-0026] Missing route to pin _21746_/D.
+[WARNING GRT-0026] Missing route to pin _21746_/D.
+[WARNING GRT-0026] Missing route to pin _21746_/D.
+[WARNING GRT-0026] Missing route to pin _18853_/X.
+[WARNING GRT-0026] Missing route to pin _18853_/X.
+[WARNING GRT-0026] Missing route to pin _18853_/X.
+[WARNING GRT-0026] Missing route to pin _21748_/D.
+[WARNING GRT-0026] Missing route to pin _21748_/D.
+[WARNING GRT-0026] Missing route to pin _21748_/D.
+[WARNING GRT-0026] Missing route to pin _18860_/X.
+[WARNING GRT-0026] Missing route to pin _18860_/X.
+[WARNING GRT-0026] Missing route to pin _18860_/X.
+[WARNING GRT-0026] Missing route to pin _21750_/D.
+[WARNING GRT-0026] Missing route to pin _21750_/D.
+[WARNING GRT-0026] Missing route to pin _21750_/D.
+[WARNING GRT-0026] Missing route to pin _21751_/D.
+[WARNING GRT-0026] Missing route to pin _21751_/D.
+[WARNING GRT-0026] Missing route to pin _21751_/D.
+[WARNING GRT-0026] Missing route to pin _18874_/X.
+[WARNING GRT-0026] Missing route to pin _18874_/X.
+[WARNING GRT-0026] Missing route to pin _18874_/X.
+[WARNING GRT-0026] Missing route to pin _21755_/D.
+[WARNING GRT-0026] Missing route to pin _21755_/D.
+[WARNING GRT-0026] Missing route to pin _21755_/D.
+[WARNING GRT-0026] Missing route to pin _21758_/D.
+[WARNING GRT-0026] Missing route to pin _21758_/D.
+[WARNING GRT-0026] Missing route to pin _21758_/D.
+[WARNING GRT-0026] Missing route to pin _21761_/D.
+[WARNING GRT-0026] Missing route to pin _21761_/D.
+[WARNING GRT-0026] Missing route to pin _21761_/D.
+[WARNING GRT-0026] Missing route to pin _21762_/D.
+[WARNING GRT-0026] Missing route to pin _21762_/D.
+[WARNING GRT-0026] Missing route to pin _21762_/D.
+[WARNING GRT-0026] Missing route to pin _21763_/D.
+[WARNING GRT-0026] Missing route to pin _21763_/D.
+[WARNING GRT-0026] Missing route to pin _21763_/D.
+[WARNING GRT-0026] Missing route to pin _21767_/D.
+[WARNING GRT-0026] Missing route to pin _21767_/D.
+[WARNING GRT-0026] Missing route to pin _21767_/D.
+[WARNING GRT-0026] Missing route to pin _18917_/X.
+[WARNING GRT-0026] Missing route to pin _18917_/X.
+[WARNING GRT-0026] Missing route to pin _18917_/X.
+[WARNING GRT-0026] Missing route to pin _21770_/D.
+[WARNING GRT-0026] Missing route to pin _21770_/D.
+[WARNING GRT-0026] Missing route to pin _21770_/D.
+[WARNING GRT-0026] Missing route to pin _21772_/D.
+[WARNING GRT-0026] Missing route to pin _21772_/D.
+[WARNING GRT-0026] Missing route to pin _21772_/D.
+[WARNING GRT-0026] Missing route to pin _18935_/Y.
+[WARNING GRT-0026] Missing route to pin _18935_/Y.
+[WARNING GRT-0026] Missing route to pin _18935_/Y.
+[WARNING GRT-0026] Missing route to pin _21779_/D.
+[WARNING GRT-0026] Missing route to pin _21779_/D.
+[WARNING GRT-0026] Missing route to pin _21779_/D.
+[WARNING GRT-0026] Missing route to pin _18961_/Y.
+[WARNING GRT-0026] Missing route to pin _18961_/Y.
+[WARNING GRT-0026] Missing route to pin _18961_/Y.
+[WARNING GRT-0026] Missing route to pin _21787_/D.
+[WARNING GRT-0026] Missing route to pin _21787_/D.
+[WARNING GRT-0026] Missing route to pin _21787_/D.
+[WARNING GRT-0026] Missing route to pin _18992_/X.
+[WARNING GRT-0026] Missing route to pin _18992_/X.
+[WARNING GRT-0026] Missing route to pin _18992_/X.
+[WARNING GRT-0026] Missing route to pin _19012_/X.
+[WARNING GRT-0026] Missing route to pin _19012_/X.
+[WARNING GRT-0026] Missing route to pin _19012_/X.
+[WARNING GRT-0026] Missing route to pin _19015_/X.
+[WARNING GRT-0026] Missing route to pin _19015_/X.
+[WARNING GRT-0026] Missing route to pin _19015_/X.
+[WARNING GRT-0026] Missing route to pin _21802_/D.
+[WARNING GRT-0026] Missing route to pin _21802_/D.
+[WARNING GRT-0026] Missing route to pin _21802_/D.
+[WARNING GRT-0026] Missing route to pin _21803_/D.
+[WARNING GRT-0026] Missing route to pin _19024_/X.
+[WARNING GRT-0026] Missing route to pin _21803_/D.
+[WARNING GRT-0026] Missing route to pin _19024_/X.
+[WARNING GRT-0026] Missing route to pin _21803_/D.
+[WARNING GRT-0026] Missing route to pin _19024_/X.
+[WARNING GRT-0026] Missing route to pin _21804_/D.
+[WARNING GRT-0026] Missing route to pin _19027_/X.
+[WARNING GRT-0026] Missing route to pin _21804_/D.
+[WARNING GRT-0026] Missing route to pin _19027_/X.
+[WARNING GRT-0026] Missing route to pin _21804_/D.
+[WARNING GRT-0026] Missing route to pin _19027_/X.
+[WARNING GRT-0026] Missing route to pin _19030_/X.
+[WARNING GRT-0026] Missing route to pin _19030_/X.
+[WARNING GRT-0026] Missing route to pin _19030_/X.
+[WARNING GRT-0026] Missing route to pin _21813_/D.
+[WARNING GRT-0026] Missing route to pin _21813_/D.
+[WARNING GRT-0026] Missing route to pin _21813_/D.
+[WARNING GRT-0026] Missing route to pin _21817_/D.
+[WARNING GRT-0026] Missing route to pin _21817_/D.
+[WARNING GRT-0026] Missing route to pin _21817_/D.
+[WARNING GRT-0026] Missing route to pin _19096_/X.
+[WARNING GRT-0026] Missing route to pin _19096_/X.
+[WARNING GRT-0026] Missing route to pin _19096_/X.
+[WARNING GRT-0026] Missing route to pin _21822_/D.
+[WARNING GRT-0026] Missing route to pin _21822_/D.
+[WARNING GRT-0026] Missing route to pin _21822_/D.
+[WARNING GRT-0026] Missing route to pin _21826_/D.
+[WARNING GRT-0026] Missing route to pin _21826_/D.
+[WARNING GRT-0026] Missing route to pin _21826_/D.
+[WARNING GRT-0026] Missing route to pin _19113_/X.
+[WARNING GRT-0026] Missing route to pin _19113_/X.
+[WARNING GRT-0026] Missing route to pin _19113_/X.
+[WARNING GRT-0026] Missing route to pin _21830_/D.
+[WARNING GRT-0026] Missing route to pin _21830_/D.
+[WARNING GRT-0026] Missing route to pin _21830_/D.
+[WARNING GRT-0026] Missing route to pin _19119_/X.
+[WARNING GRT-0026] Missing route to pin _19119_/X.
+[WARNING GRT-0026] Missing route to pin _19119_/X.
+[WARNING GRT-0026] Missing route to pin _21833_/D.
+[WARNING GRT-0026] Missing route to pin _21833_/D.
+[WARNING GRT-0026] Missing route to pin _21833_/D.
+[WARNING GRT-0026] Missing route to pin _21839_/D.
+[WARNING GRT-0026] Missing route to pin _21839_/D.
+[WARNING GRT-0026] Missing route to pin _21839_/D.
+[WARNING GRT-0026] Missing route to pin _21841_/D.
+[WARNING GRT-0026] Missing route to pin _21841_/D.
+[WARNING GRT-0026] Missing route to pin _21841_/D.
+[WARNING GRT-0026] Missing route to pin _21845_/D.
+[WARNING GRT-0026] Missing route to pin _21845_/D.
+[WARNING GRT-0026] Missing route to pin _21845_/D.
+[WARNING GRT-0026] Missing route to pin _21850_/D.
+[WARNING GRT-0026] Missing route to pin _21850_/D.
+[WARNING GRT-0026] Missing route to pin _21850_/D.
+[WARNING GRT-0026] Missing route to pin _21852_/D.
+[WARNING GRT-0026] Missing route to pin _21852_/D.
+[WARNING GRT-0026] Missing route to pin _21852_/D.
+[WARNING GRT-0026] Missing route to pin _19184_/X.
+[WARNING GRT-0026] Missing route to pin _19184_/X.
+[WARNING GRT-0026] Missing route to pin _19184_/X.
+[WARNING GRT-0026] Missing route to pin _21855_/D.
+[WARNING GRT-0026] Missing route to pin _21855_/D.
+[WARNING GRT-0026] Missing route to pin _21855_/D.
+[WARNING GRT-0026] Missing route to pin _21857_/D.
+[WARNING GRT-0026] Missing route to pin _21857_/D.
+[WARNING GRT-0026] Missing route to pin _21857_/D.
+[WARNING GRT-0026] Missing route to pin _21858_/D.
+[WARNING GRT-0026] Missing route to pin _21858_/D.
+[WARNING GRT-0026] Missing route to pin _21858_/D.
+[WARNING GRT-0026] Missing route to pin _21864_/D.
+[WARNING GRT-0026] Missing route to pin _19209_/X.
+[WARNING GRT-0026] Missing route to pin _21864_/D.
+[WARNING GRT-0026] Missing route to pin _19209_/X.
+[WARNING GRT-0026] Missing route to pin _21864_/D.
+[WARNING GRT-0026] Missing route to pin _19209_/X.
+[WARNING GRT-0026] Missing route to pin _21868_/D.
+[WARNING GRT-0026] Missing route to pin _19217_/X.
+[WARNING GRT-0026] Missing route to pin _21868_/D.
+[WARNING GRT-0026] Missing route to pin _19217_/X.
+[WARNING GRT-0026] Missing route to pin _21868_/D.
+[WARNING GRT-0026] Missing route to pin _19217_/X.
+[WARNING GRT-0026] Missing route to pin _21875_/D.
+[WARNING GRT-0026] Missing route to pin _21875_/D.
+[WARNING GRT-0026] Missing route to pin _21875_/D.
+[WARNING GRT-0026] Missing route to pin _21877_/D.
+[WARNING GRT-0026] Missing route to pin _21877_/D.
+[WARNING GRT-0026] Missing route to pin _21877_/D.
+[WARNING GRT-0026] Missing route to pin _19258_/Y.
+[WARNING GRT-0026] Missing route to pin _19258_/Y.
+[WARNING GRT-0026] Missing route to pin _19258_/Y.
+[WARNING GRT-0026] Missing route to pin _19264_/Y.
+[WARNING GRT-0026] Missing route to pin _19264_/Y.
+[WARNING GRT-0026] Missing route to pin _19264_/Y.
+[WARNING GRT-0026] Missing route to pin _21884_/D.
+[WARNING GRT-0026] Missing route to pin _21884_/D.
+[WARNING GRT-0026] Missing route to pin _21884_/D.
+[WARNING GRT-0026] Missing route to pin _21888_/D.
+[WARNING GRT-0026] Missing route to pin _21888_/D.
+[WARNING GRT-0026] Missing route to pin _21888_/D.
+[WARNING GRT-0026] Missing route to pin _19282_/X.
+[WARNING GRT-0026] Missing route to pin _19282_/X.
+[WARNING GRT-0026] Missing route to pin _19282_/X.
+[WARNING GRT-0026] Missing route to pin _21891_/D.
+[WARNING GRT-0026] Missing route to pin _21891_/D.
+[WARNING GRT-0026] Missing route to pin _21891_/D.
+[WARNING GRT-0026] Missing route to pin _21894_/D.
+[WARNING GRT-0026] Missing route to pin _19290_/X.
+[WARNING GRT-0026] Missing route to pin _21894_/D.
+[WARNING GRT-0026] Missing route to pin _19290_/X.
+[WARNING GRT-0026] Missing route to pin _21894_/D.
+[WARNING GRT-0026] Missing route to pin _19290_/X.
+[WARNING GRT-0026] Missing route to pin _21896_/D.
+[WARNING GRT-0026] Missing route to pin _21896_/D.
+[WARNING GRT-0026] Missing route to pin _21896_/D.
+[WARNING GRT-0026] Missing route to pin _21897_/D.
+[WARNING GRT-0026] Missing route to pin _21897_/D.
+[WARNING GRT-0026] Missing route to pin _21897_/D.
+[WARNING GRT-0026] Missing route to pin _21900_/D.
+[WARNING GRT-0026] Missing route to pin _21900_/D.
+[WARNING GRT-0026] Missing route to pin _21900_/D.
+[WARNING GRT-0026] Missing route to pin _21906_/D.
+[WARNING GRT-0026] Missing route to pin _21906_/D.
+[WARNING GRT-0026] Missing route to pin _21906_/D.
+[WARNING GRT-0026] Missing route to pin _19345_/Y.
+[WARNING GRT-0026] Missing route to pin _19345_/Y.
+[WARNING GRT-0026] Missing route to pin _19345_/Y.
+[WARNING GRT-0026] Missing route to pin _19348_/Y.
+[WARNING GRT-0026] Missing route to pin _19348_/Y.
+[WARNING GRT-0026] Missing route to pin _19348_/Y.
+[WARNING GRT-0026] Missing route to pin _21916_/D.
+[WARNING GRT-0026] Missing route to pin _21916_/D.
+[WARNING GRT-0026] Missing route to pin _21916_/D.
+[WARNING GRT-0026] Missing route to pin _21917_/D.
+[WARNING GRT-0026] Missing route to pin _19358_/X.
+[WARNING GRT-0026] Missing route to pin _21917_/D.
+[WARNING GRT-0026] Missing route to pin _19358_/X.
+[WARNING GRT-0026] Missing route to pin _21917_/D.
+[WARNING GRT-0026] Missing route to pin _19358_/X.
+[WARNING GRT-0026] Missing route to pin _19365_/X.
+[WARNING GRT-0026] Missing route to pin _19365_/X.
+[WARNING GRT-0026] Missing route to pin _19365_/X.
+[WARNING GRT-0026] Missing route to pin _21922_/D.
+[WARNING GRT-0026] Missing route to pin _19369_/X.
+[WARNING GRT-0026] Missing route to pin _21922_/D.
+[WARNING GRT-0026] Missing route to pin _19369_/X.
+[WARNING GRT-0026] Missing route to pin _21922_/D.
+[WARNING GRT-0026] Missing route to pin _19369_/X.
+[WARNING GRT-0026] Missing route to pin _21926_/D.
+[WARNING GRT-0026] Missing route to pin _21926_/D.
+[WARNING GRT-0026] Missing route to pin _21926_/D.
+[WARNING GRT-0026] Missing route to pin _21927_/D.
+[WARNING GRT-0026] Missing route to pin _21927_/D.
+[WARNING GRT-0026] Missing route to pin _21927_/D.
+[WARNING GRT-0026] Missing route to pin _21929_/D.
+[WARNING GRT-0026] Missing route to pin _21929_/D.
+[WARNING GRT-0026] Missing route to pin _21929_/D.
+[WARNING GRT-0026] Missing route to pin _21932_/D.
+[WARNING GRT-0026] Missing route to pin _21932_/D.
+[WARNING GRT-0026] Missing route to pin _21932_/D.
+[WARNING GRT-0026] Missing route to pin _21937_/D.
+[WARNING GRT-0026] Missing route to pin _21937_/D.
+[WARNING GRT-0026] Missing route to pin _21937_/D.
+[WARNING GRT-0026] Missing route to pin _21939_/D.
+[WARNING GRT-0026] Missing route to pin _21939_/D.
+[WARNING GRT-0026] Missing route to pin _21939_/D.
+[WARNING GRT-0026] Missing route to pin _21943_/D.
+[WARNING GRT-0026] Missing route to pin _21943_/D.
+[WARNING GRT-0026] Missing route to pin _21943_/D.
+[WARNING GRT-0026] Missing route to pin _21945_/D.
+[WARNING GRT-0026] Missing route to pin _21945_/D.
+[WARNING GRT-0026] Missing route to pin _21945_/D.
+[WARNING GRT-0026] Missing route to pin _19438_/Y.
+[WARNING GRT-0026] Missing route to pin _19438_/Y.
+[WARNING GRT-0026] Missing route to pin _19438_/Y.
+[WARNING GRT-0026] Missing route to pin _21948_/D.
+[WARNING GRT-0026] Missing route to pin _21948_/D.
+[WARNING GRT-0026] Missing route to pin _21948_/D.
+[WARNING GRT-0026] Missing route to pin _21949_/D.
+[WARNING GRT-0026] Missing route to pin _21949_/D.
+[WARNING GRT-0026] Missing route to pin _21949_/D.
+[WARNING GRT-0026] Missing route to pin _21950_/D.
+[WARNING GRT-0026] Missing route to pin _21950_/D.
+[WARNING GRT-0026] Missing route to pin _21950_/D.
+[WARNING GRT-0026] Missing route to pin _21956_/D.
+[WARNING GRT-0026] Missing route to pin _19461_/X.
+[WARNING GRT-0026] Missing route to pin _21956_/D.
+[WARNING GRT-0026] Missing route to pin _19461_/X.
+[WARNING GRT-0026] Missing route to pin _21956_/D.
+[WARNING GRT-0026] Missing route to pin _19461_/X.
+[WARNING GRT-0026] Missing route to pin _19463_/X.
+[WARNING GRT-0026] Missing route to pin _19463_/X.
+[WARNING GRT-0026] Missing route to pin _19463_/X.
+[WARNING GRT-0026] Missing route to pin _21958_/D.
+[WARNING GRT-0026] Missing route to pin _19465_/X.
+[WARNING GRT-0026] Missing route to pin _21958_/D.
+[WARNING GRT-0026] Missing route to pin _19465_/X.
+[WARNING GRT-0026] Missing route to pin _21958_/D.
+[WARNING GRT-0026] Missing route to pin _19465_/X.
+[WARNING GRT-0026] Missing route to pin _19470_/X.
+[WARNING GRT-0026] Missing route to pin _19470_/X.
+[WARNING GRT-0026] Missing route to pin _19470_/X.
+[WARNING GRT-0026] Missing route to pin _21961_/D.
+[WARNING GRT-0026] Missing route to pin _21961_/D.
+[WARNING GRT-0026] Missing route to pin _21961_/D.
+[WARNING GRT-0026] Missing route to pin _21964_/D.
+[WARNING GRT-0026] Missing route to pin _21964_/D.
+[WARNING GRT-0026] Missing route to pin _21964_/D.
+[WARNING GRT-0026] Missing route to pin _21968_/D.
+[WARNING GRT-0026] Missing route to pin _21968_/D.
+[WARNING GRT-0026] Missing route to pin _21968_/D.
+[WARNING GRT-0026] Missing route to pin _21973_/D.
+[WARNING GRT-0026] Missing route to pin _21973_/D.
+[WARNING GRT-0026] Missing route to pin _21973_/D.
+[WARNING GRT-0026] Missing route to pin _19515_/Y.
+[WARNING GRT-0026] Missing route to pin _19515_/Y.
+[WARNING GRT-0026] Missing route to pin _19515_/Y.
+[WARNING GRT-0026] Missing route to pin _21975_/D.
+[WARNING GRT-0026] Missing route to pin _21975_/D.
+[WARNING GRT-0026] Missing route to pin _21975_/D.
+[WARNING GRT-0026] Missing route to pin _21978_/D.
+[WARNING GRT-0026] Missing route to pin _21978_/D.
+[WARNING GRT-0026] Missing route to pin _21978_/D.
+[WARNING GRT-0026] Missing route to pin _21980_/D.
+[WARNING GRT-0026] Missing route to pin _21980_/D.
+[WARNING GRT-0026] Missing route to pin _21980_/D.
+[WARNING GRT-0026] Missing route to pin _19538_/X.
+[WARNING GRT-0026] Missing route to pin _19538_/X.
+[WARNING GRT-0026] Missing route to pin _19538_/X.
+[WARNING GRT-0026] Missing route to pin _21984_/D.
+[WARNING GRT-0026] Missing route to pin _21984_/D.
+[WARNING GRT-0026] Missing route to pin _21984_/D.
+[WARNING GRT-0026] Missing route to pin _21988_/D.
+[WARNING GRT-0026] Missing route to pin _19560_/X.
+[WARNING GRT-0026] Missing route to pin _21988_/D.
+[WARNING GRT-0026] Missing route to pin _19560_/X.
+[WARNING GRT-0026] Missing route to pin _21988_/D.
+[WARNING GRT-0026] Missing route to pin _19560_/X.
+[WARNING GRT-0026] Missing route to pin _19566_/X.
+[WARNING GRT-0026] Missing route to pin _19566_/X.
+[WARNING GRT-0026] Missing route to pin _19566_/X.
+[WARNING GRT-0026] Missing route to pin _19572_/X.
+[WARNING GRT-0026] Missing route to pin _19572_/X.
+[WARNING GRT-0026] Missing route to pin _19572_/X.
+[WARNING GRT-0026] Missing route to pin _21996_/D.
+[WARNING GRT-0026] Missing route to pin _21996_/D.
+[WARNING GRT-0026] Missing route to pin _21996_/D.
+[WARNING GRT-0026] Missing route to pin _19604_/Y.
+[WARNING GRT-0026] Missing route to pin _19604_/Y.
+[WARNING GRT-0026] Missing route to pin _19604_/Y.
+[WARNING GRT-0026] Missing route to pin _19611_/Y.
+[WARNING GRT-0026] Missing route to pin _19611_/Y.
+[WARNING GRT-0026] Missing route to pin _19611_/Y.
+[WARNING GRT-0026] Missing route to pin _22003_/D.
+[WARNING GRT-0026] Missing route to pin _22003_/D.
+[WARNING GRT-0026] Missing route to pin _22003_/D.
+[WARNING GRT-0026] Missing route to pin _22004_/D.
+[WARNING GRT-0026] Missing route to pin _22004_/D.
+[WARNING GRT-0026] Missing route to pin _22004_/D.
+[WARNING GRT-0026] Missing route to pin _22006_/D.
+[WARNING GRT-0026] Missing route to pin _22006_/D.
+[WARNING GRT-0026] Missing route to pin _22006_/D.
+[WARNING GRT-0026] Missing route to pin _22009_/D.
+[WARNING GRT-0026] Missing route to pin _22009_/D.
+[WARNING GRT-0026] Missing route to pin _22009_/D.
+[WARNING GRT-0026] Missing route to pin _22016_/D.
+[WARNING GRT-0026] Missing route to pin _22016_/D.
+[WARNING GRT-0026] Missing route to pin _22016_/D.
+[WARNING GRT-0026] Missing route to pin _19667_/X.
+[WARNING GRT-0026] Missing route to pin _19667_/X.
+[WARNING GRT-0026] Missing route to pin _19667_/X.
+[WARNING GRT-0026] Missing route to pin _19673_/X.
+[WARNING GRT-0026] Missing route to pin _19673_/X.
+[WARNING GRT-0026] Missing route to pin _19673_/X.
+[WARNING GRT-0026] Missing route to pin _22026_/D.
+[WARNING GRT-0026] Missing route to pin _22026_/D.
+[WARNING GRT-0026] Missing route to pin _22026_/D.
+[WARNING GRT-0026] Missing route to pin _22028_/D.
+[WARNING GRT-0026] Missing route to pin _22028_/D.
+[WARNING GRT-0026] Missing route to pin _22028_/D.
+[WARNING GRT-0026] Missing route to pin _22029_/D.
+[WARNING GRT-0026] Missing route to pin _22029_/D.
+[WARNING GRT-0026] Missing route to pin _22029_/D.
+[WARNING GRT-0026] Missing route to pin _22032_/D.
+[WARNING GRT-0026] Missing route to pin _22032_/D.
+[WARNING GRT-0026] Missing route to pin _22032_/D.
+[WARNING GRT-0026] Missing route to pin _22037_/D.
+[WARNING GRT-0026] Missing route to pin _22037_/D.
+[WARNING GRT-0026] Missing route to pin _22037_/D.
+[WARNING GRT-0026] Missing route to pin _19703_/X.
+[WARNING GRT-0026] Missing route to pin _19703_/X.
+[WARNING GRT-0026] Missing route to pin _19703_/X.
+[WARNING GRT-0026] Missing route to pin _19727_/X.
+[WARNING GRT-0026] Missing route to pin _19727_/X.
+[WARNING GRT-0026] Missing route to pin _19727_/X.
+[WARNING GRT-0026] Missing route to pin _22052_/D.
+[WARNING GRT-0026] Missing route to pin _22052_/D.
+[WARNING GRT-0026] Missing route to pin _22052_/D.
+[WARNING GRT-0026] Missing route to pin _19737_/X.
+[WARNING GRT-0026] Missing route to pin _19737_/X.
+[WARNING GRT-0026] Missing route to pin _19737_/X.
+[WARNING GRT-0026] Missing route to pin _19741_/X.
+[WARNING GRT-0026] Missing route to pin _19741_/X.
+[WARNING GRT-0026] Missing route to pin _19741_/X.
+[WARNING GRT-0026] Missing route to pin _19749_/X.
+[WARNING GRT-0026] Missing route to pin _19749_/X.
+[WARNING GRT-0026] Missing route to pin _19749_/X.
+[WARNING GRT-0026] Missing route to pin _22060_/D.
+[WARNING GRT-0026] Missing route to pin _19751_/X.
+[WARNING GRT-0026] Missing route to pin _22060_/D.
+[WARNING GRT-0026] Missing route to pin _19751_/X.
+[WARNING GRT-0026] Missing route to pin _22060_/D.
+[WARNING GRT-0026] Missing route to pin _19751_/X.
+[WARNING GRT-0026] Missing route to pin _22063_/D.
+[WARNING GRT-0026] Missing route to pin _22063_/D.
+[WARNING GRT-0026] Missing route to pin _22063_/D.
+[WARNING GRT-0026] Missing route to pin _19796_/Y.
+[WARNING GRT-0026] Missing route to pin _19796_/Y.
+[WARNING GRT-0026] Missing route to pin _19796_/Y.
+[WARNING GRT-0026] Missing route to pin _19799_/Y.
+[WARNING GRT-0026] Missing route to pin _19799_/Y.
+[WARNING GRT-0026] Missing route to pin _19799_/Y.
+[WARNING GRT-0026] Missing route to pin _22076_/D.
+[WARNING GRT-0026] Missing route to pin _22076_/D.
+[WARNING GRT-0026] Missing route to pin _22076_/D.
+[WARNING GRT-0026] Missing route to pin _19820_/X.
+[WARNING GRT-0026] Missing route to pin _19820_/X.
+[WARNING GRT-0026] Missing route to pin _19820_/X.
+[WARNING GRT-0026] Missing route to pin _22084_/D.
+[WARNING GRT-0026] Missing route to pin _22084_/D.
+[WARNING GRT-0026] Missing route to pin _22084_/D.
+[WARNING GRT-0026] Missing route to pin _19824_/X.
+[WARNING GRT-0026] Missing route to pin _19824_/X.
+[WARNING GRT-0026] Missing route to pin _19824_/X.
+[WARNING GRT-0026] Missing route to pin _22087_/D.
+[WARNING GRT-0026] Missing route to pin _22087_/D.
+[WARNING GRT-0026] Missing route to pin _22087_/D.
+[WARNING GRT-0026] Missing route to pin _19835_/X.
+[WARNING GRT-0026] Missing route to pin _19835_/X.
+[WARNING GRT-0026] Missing route to pin _19835_/X.
+[WARNING GRT-0026] Missing route to pin _19837_/X.
+[WARNING GRT-0026] Missing route to pin _19837_/X.
+[WARNING GRT-0026] Missing route to pin _19837_/X.
+[WARNING GRT-0026] Missing route to pin _19839_/X.
+[WARNING GRT-0026] Missing route to pin _19839_/X.
+[WARNING GRT-0026] Missing route to pin _19839_/X.
+[WARNING GRT-0026] Missing route to pin _22092_/D.
+[WARNING GRT-0026] Missing route to pin _22092_/D.
+[WARNING GRT-0026] Missing route to pin _22092_/D.
+[WARNING GRT-0026] Missing route to pin _22102_/D.
+[WARNING GRT-0026] Missing route to pin _19874_/Y.
+[WARNING GRT-0026] Missing route to pin _22102_/D.
+[WARNING GRT-0026] Missing route to pin _19874_/Y.
+[WARNING GRT-0026] Missing route to pin _22102_/D.
+[WARNING GRT-0026] Missing route to pin _19874_/Y.
+[WARNING GRT-0026] Missing route to pin _22104_/D.
+[WARNING GRT-0026] Missing route to pin _22104_/D.
+[WARNING GRT-0026] Missing route to pin _22104_/D.
+[WARNING GRT-0026] Missing route to pin _19883_/Y.
+[WARNING GRT-0026] Missing route to pin _19883_/Y.
+[WARNING GRT-0026] Missing route to pin _19883_/Y.
+[WARNING GRT-0026] Missing route to pin _22108_/D.
+[WARNING GRT-0026] Missing route to pin _22108_/D.
+[WARNING GRT-0026] Missing route to pin _22108_/D.
+[WARNING GRT-0026] Missing route to pin _22109_/D.
+[WARNING GRT-0026] Missing route to pin _22109_/D.
+[WARNING GRT-0026] Missing route to pin _22109_/D.
+[WARNING GRT-0026] Missing route to pin _19905_/X.
+[WARNING GRT-0026] Missing route to pin _19905_/X.
+[WARNING GRT-0026] Missing route to pin _19905_/X.
+[WARNING GRT-0026] Missing route to pin _19913_/X.
+[WARNING GRT-0026] Missing route to pin _19913_/X.
+[WARNING GRT-0026] Missing route to pin _19913_/X.
+[WARNING GRT-0026] Missing route to pin _22118_/D.
+[WARNING GRT-0026] Missing route to pin _22118_/D.
+[WARNING GRT-0026] Missing route to pin _22118_/D.
+[WARNING GRT-0026] Missing route to pin _19919_/X.
+[WARNING GRT-0026] Missing route to pin _19919_/X.
+[WARNING GRT-0026] Missing route to pin _19919_/X.
+[WARNING GRT-0026] Missing route to pin _22120_/D.
+[WARNING GRT-0026] Missing route to pin _22120_/D.
+[WARNING GRT-0026] Missing route to pin _22120_/D.
+[WARNING GRT-0026] Missing route to pin _22121_/D.
+[WARNING GRT-0026] Missing route to pin _22121_/D.
+[WARNING GRT-0026] Missing route to pin _22121_/D.
+[WARNING GRT-0026] Missing route to pin _19927_/X.
+[WARNING GRT-0026] Missing route to pin _19927_/X.
+[WARNING GRT-0026] Missing route to pin _19927_/X.
+[WARNING GRT-0026] Missing route to pin _19942_/Y.
+[WARNING GRT-0026] Missing route to pin _19942_/Y.
+[WARNING GRT-0026] Missing route to pin _19942_/Y.
+[WARNING GRT-0026] Missing route to pin _22130_/D.
+[WARNING GRT-0026] Missing route to pin _22130_/D.
+[WARNING GRT-0026] Missing route to pin _22130_/D.
+[WARNING GRT-0026] Missing route to pin _19969_/Y.
+[WARNING GRT-0026] Missing route to pin _19969_/Y.
+[WARNING GRT-0026] Missing route to pin _19969_/Y.
+[WARNING GRT-0026] Missing route to pin _19975_/Y.
+[WARNING GRT-0026] Missing route to pin _19975_/Y.
+[WARNING GRT-0026] Missing route to pin _19975_/Y.
+[WARNING GRT-0026] Missing route to pin _19994_/X.
+[WARNING GRT-0026] Missing route to pin _19994_/X.
+[WARNING GRT-0026] Missing route to pin _19994_/X.
+[WARNING GRT-0026] Missing route to pin _22148_/D.
+[WARNING GRT-0026] Missing route to pin _22148_/D.
+[WARNING GRT-0026] Missing route to pin _22148_/D.
+[WARNING GRT-0026] Missing route to pin _20012_/X.
+[WARNING GRT-0026] message limit reached, this message will no longer print
+[INFO RSZ-0058] Using max wire length 4508um.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 29 nets.
+[INFO GRT-0009] rerouting 29 nets.
+[INFO GRT-0009] rerouting 30 nets.
+[INFO GRT-0009] rerouting 30 nets.
+[INFO GRT-0009] rerouting 31 nets.
+[INFO GRT-0009] rerouting 31 nets.
+[INFO GRT-0009] rerouting 34 nets.
+[INFO GRT-0009] rerouting 38 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 29 nets.
+[INFO GRT-0009] rerouting 29 nets.
+[INFO GRT-0009] rerouting 30 nets.
+[INFO GRT-0009] rerouting 30 nets.
+[INFO GRT-0009] rerouting 33 nets.
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 32 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 30 nets.
+[INFO GRT-0009] rerouting 31 nets.
+[INFO GRT-0009] rerouting 34 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 30 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 26 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 27 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0009] rerouting 29 nets.
+[INFO GRT-0009] rerouting 30 nets.
+[INFO GRT-0009] rerouting 30 nets.
+[INFO GRT-0009] rerouting 31 nets.
+[INFO GRT-0009] rerouting 31 nets.
+[INFO GRT-0009] rerouting 33 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0009] rerouting 22 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 23 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 25 nets.
+[INFO GRT-0009] rerouting 28 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 11 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 18 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 19 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 20 nets.
+[INFO GRT-0009] rerouting 24 nets.
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 12 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 14 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 15 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 16 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 17 nets.
+[INFO GRT-0009] rerouting 21 nets.
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 9 nets.
+[INFO GRT-0009] rerouting 10 nets.
+[INFO GRT-0009] rerouting 13 nets.
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 3 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0009] rerouting 6 nets.
+[INFO GRT-0009] rerouting 7 nets.
+[INFO GRT-0009] rerouting 8 nets.
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 5 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 4 nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 1 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] rerouting 2 nets.
+[INFO GRT-0009] message limit reached, this message will no longer print
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2147483647
+[INFO GRT-0002] Maximum degree: 1
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 6
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 6
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 3
+[INFO GRT-0001] Minimum degree: 3
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 2
+[INFO GRT-0001] Minimum degree: 7
+[INFO GRT-0002] Maximum degree: 7
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 4
+[INFO GRT-0001] Minimum degree: 5
+[INFO GRT-0002] Maximum degree: 5
+[INFO GRT-0001] Minimum degree: 4
+[INFO GRT-0002] Maximum degree: 4
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0039] Resized 2522 instances.
+Placement Analysis
+---------------------------------
+total displacement      82706.7 u
+average displacement        4.9 u
+max displacement           59.2 u
+original HPWL         1872296.9 u
+legalized HPWL        1935691.0 u
+delta HPWL                    3 %
+
+[INFO DPL-0020] Mirrored 6066 instances
+[INFO DPL-0021] HPWL before          1935691.0 u
+[INFO DPL-0022] HPWL after           1924640.5 u
+[INFO DPL-0023] HPWL delta               -0.6 %
+Setting global connections for newly added cells…
+Writing OpenROAD database to '/openlane/designs/picosoc/runs/test123/tmp/15-picorv32_wrapper.odb'…
+Writing netlist to '/openlane/designs/picosoc/runs/test123/tmp/15-picorv32_wrapper.nl.v'…
+Writing powered netlist to '/openlane/designs/picosoc/runs/test123/tmp/15-picorv32_wrapper.pnl.v'…
+Writing layout to '/openlane/designs/picosoc/runs/test123/tmp/15-picorv32_wrapper.def'…
+Writing timing constraints to '/openlane/designs/picosoc/runs/test123/tmp/15-picorv32_wrapper.sdc'…
+area_report
+
+===========================================================================
+report_design_area
+============================================================================
+Design area 115598 u^2 41% utilization.
+area_report_end

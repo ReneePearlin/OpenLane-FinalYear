@@ -1,0 +1,143 @@
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:42:10: Cell pin connected by name with empty reference: 'mem_la_read'
+   42 |         .mem_la_read(),
+      |          ^~~~~~~~~~~
+                          ... For warning description see https://verilator.org/warn/PINCONNECTEMPTY?v=5.009
+                          ... Use "/* verilator lint_off PINCONNECTEMPTY */" and lint_on around source to disable this message.
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:43:10: Cell pin connected by name with empty reference: 'mem_la_write'
+   43 |         .mem_la_write(),
+      |          ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:44:10: Cell pin connected by name with empty reference: 'mem_la_addr'
+   44 |         .mem_la_addr(),
+      |          ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:45:10: Cell pin connected by name with empty reference: 'mem_la_wdata'
+   45 |         .mem_la_wdata(),
+      |          ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:46:10: Cell pin connected by name with empty reference: 'mem_la_wstrb'
+   46 |         .mem_la_wstrb(),
+      |          ^~~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:49:10: Cell pin connected by name with empty reference: 'pcpi_valid'
+   49 |         .pcpi_valid(),
+      |          ^~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:50:10: Cell pin connected by name with empty reference: 'pcpi_insn'
+   50 |         .pcpi_insn(),
+      |          ^~~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:51:10: Cell pin connected by name with empty reference: 'pcpi_rs1'
+   51 |         .pcpi_rs1(),
+      |          ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:52:10: Cell pin connected by name with empty reference: 'pcpi_rs2'
+   52 |         .pcpi_rs2(),
+      |          ^~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:63:10: Cell pin connected by name with empty reference: 'trace_valid'
+   63 |         .trace_valid(),
+      |          ^~~~~~~~~~~
+%Warning-PINCONNECTEMPTY: /openlane/designs/picosoc/src/picorv32_wrapper.v:64:10: Cell pin connected by name with empty reference: 'trace_data'
+   64 |         .trace_data()
+      |          ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32_wrapper.v:20:17: Signal is not used: 'eoi'
+                                                                             : ... In instance picorv32_wrapper
+   20 |     wire [31:0] eoi;
+      |                 ^~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:181:13: Signal is not used: 'dbg_insn_addr'
+                                                                      : ... In instance picorv32_wrapper.core
+  181 |  reg [31:0] dbg_insn_addr;
+      |             ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:183:7: Signal is not used: 'dbg_mem_valid'
+                                                                     : ... In instance picorv32_wrapper.core
+  183 |  wire dbg_mem_valid = mem_valid;
+      |       ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:184:7: Signal is not used: 'dbg_mem_instr'
+                                                                     : ... In instance picorv32_wrapper.core
+  184 |  wire dbg_mem_instr = mem_instr;
+      |       ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:185:7: Signal is not used: 'dbg_mem_ready'
+                                                                     : ... In instance picorv32_wrapper.core
+  185 |  wire dbg_mem_ready = mem_ready;
+      |       ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:186:14: Signal is not used: 'dbg_mem_addr'
+                                                                      : ... In instance picorv32_wrapper.core
+  186 |  wire [31:0] dbg_mem_addr  = mem_addr;
+      |              ^~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:187:14: Signal is not used: 'dbg_mem_wdata'
+                                                                      : ... In instance picorv32_wrapper.core
+  187 |  wire [31:0] dbg_mem_wdata = mem_wdata;
+      |              ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:188:14: Signal is not used: 'dbg_mem_wstrb'
+                                                                      : ... In instance picorv32_wrapper.core
+  188 |  wire [ 3:0] dbg_mem_wstrb = mem_wstrb;
+      |              ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:189:14: Signal is not used: 'dbg_mem_rdata'
+                                                                      : ... In instance picorv32_wrapper.core
+  189 |  wire [31:0] dbg_mem_rdata = mem_rdata;
+      |              ^~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:375:7: Signal is not used: 'mem_busy'
+                                                                     : ... In instance picorv32_wrapper.core
+  375 |  wire mem_busy = |{mem_do_prefetch, mem_do_rinst, mem_do_rdata, mem_do_wdata};
+      |       ^~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:696:14: Signal is not used: 'dbg_rs1val'
+                                                                      : ... In instance picorv32_wrapper.core
+  696 |   reg [31:0] dbg_rs1val;
+      |              ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:697:14: Signal is not used: 'dbg_rs2val'
+                                                                      : ... In instance picorv32_wrapper.core
+  697 |   reg [31:0] dbg_rs2val;
+      |              ^~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:698:7: Signal is not used: 'dbg_rs1val_valid'
+                                                                     : ... In instance picorv32_wrapper.core
+  698 |   reg dbg_rs1val_valid;
+      |       ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:699:7: Signal is not used: 'dbg_rs2val_valid'
+                                                                     : ... In instance picorv32_wrapper.core
+  699 |   reg dbg_rs2val_valid;
+      |       ^~~~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:769:6: Signal is not used: 'dbg_valid_insn'
+                                                                     : ... In instance picorv32_wrapper.core
+  769 |  reg dbg_valid_insn;
+      |      ^~~~~~~~~~~~~~
+%Warning-UNUSEDSIGNAL: /openlane/designs/picosoc/src/picorv32.v:1184:15: Signal is not used: 'dbg_ascii_state'
+                                                                       : ... In instance picorv32_wrapper.core
+ 1184 |   reg [127:0] dbg_ascii_state;
+      |               ^~~~~~~~~~~~~~~
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1406:20: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1406 |   set_mem_do_rinst = 0;
+      |                    ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1407:20: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1407 |   set_mem_do_rdata = 0;
+      |                    ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1408:20: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1408 |   set_mem_do_wdata = 0;
+      |                    ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1440:20: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1440 |   next_irq_pending = ENABLE_IRQ ? irq_pending & LATCHED_IRQ : 'bx;
+      |                    ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1495:16: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1495 |     current_pc = reg_next_pc;
+      |                ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1500:18: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1500 |       current_pc = latched_store ? (latched_stalu ? alu_out_q : reg_out) & ~1 : reg_next_pc;
+      |                  ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1819:24: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1819 |       set_mem_do_rinst = 1;
+      |                        ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1870:24: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1870 |       set_mem_do_wdata = 1;
+      |                        ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1898:24: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1898 |       set_mem_do_rdata = 1;
+      |                        ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1474:21: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1474 |    next_irq_pending = 0;
+      |                     ^
+%Warning-BLKSEQ: /openlane/designs/picosoc/src/picorv32.v:1974:14: Blocking assignment '=' in sequential logic process
+                                                                 : ... Suggest using delayed assignment '<='
+ 1974 |   current_pc = 'bx;
+      |              ^

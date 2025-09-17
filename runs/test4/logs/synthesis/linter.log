@@ -1,0 +1,80 @@
+%Error: /openlane/designs/picosoc/src/picorv32.v:1:1: syntax error, unexpected IDENTIFIER
+    1 | coRV32 -- A Small RISC-V (RV32I) Processor Core
+      | ^~~~~~
+%Error-UNSUPPORTED: /openlane/designs/picosoc/src/picorv32.v:5:19: Unsupported: Verilog 2001-config reserved word not implemented: 'use'
+    5 |  *  Permission to use, copy, modify, and/or distribute this software for any
+      |                   ^~~
+                    ... For error description see https://verilator.org/warn/UNSUPPORTED?v=5.009
+%Error: /openlane/designs/picosoc/src/picorv32.v:3048:17: syntax error, unexpected --, expecting IDENTIFIER or randomize
+ 3048 | endmodulecoRV32 -- A Small RISC-V (RV32I) Processor Core
+      |                 ^~
+%Error-UNSUPPORTED: /openlane/designs/picosoc/src/picorv32.v:3052:19: Unsupported: Verilog 2001-config reserved word not implemented: 'use'
+ 3052 |  *  Permission to use, copy, modify, and/or distribute this software for any
+      |                   ^~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6106:1: syntax error, unexpected module
+ 6106 | module picorv32 #(
+      | ^~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6219:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6219 |  reg [63:0] count_cycle, count_instr;
+      |             ^~~~~~~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6220:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6220 |  reg [31:0] reg_pc, reg_next_pc, reg_op1, reg_op2, reg_out;
+      |             ^~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6221:12: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6221 |  reg [4:0] reg_sh;
+      |            ^~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6223:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6223 |  reg [31:0] next_insn_opcode;
+      |             ^~~~~~~~~~~~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6224:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6224 |  reg [31:0] dbg_insn_opcode;
+      |             ^~~~~~~~~~~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6225:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6225 |  reg [31:0] dbg_insn_addr;
+      |             ^~~~~~~~~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6238:2: syntax error, unexpected wire
+ 6238 |  wire [31:0] next_pc;
+      |  ^~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6242:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6242 |  reg [31:0] irq_mask;
+      |             ^~~~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6243:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6243 |  reg [31:0] irq_pending;
+      |             ^~~~~~~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6244:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6244 |  reg [31:0] timer;
+      |             ^~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6262:2: syntax error, unexpected endtask
+ 6262 |  endtask
+      |  ^~~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6312:13: syntax error, unexpected IDENTIFIER, expecting "'{"
+ 6312 |  reg [31:0] pcpi_int_rd;
+      |             ^~~~~~~~~~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6347:2: syntax error, unexpected end
+ 6347 |  end endgenerate
+      |  ^~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6367:2: syntax error, unexpected end
+ 6367 |  end endgenerate
+      |  ^~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:6378:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+ 6378 |     pcpi_int_wr = ENABLE_PCPI ? pcpi_wr : 0;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/picorv32.v:6382:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+ 6382 |     pcpi_int_wr = pcpi_mul_wr;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/picorv32.v:6386:17: syntax error, unexpected '=', expecting IDENTIFIER or randomize
+ 6386 |     pcpi_int_wr = pcpi_div_wr;
+      |                 ^
+%Error: /openlane/designs/picosoc/src/picorv32.v:6390:2: syntax error, unexpected end
+ 6390 |  end
+      |  ^~~
+%Error: /openlane/designs/picosoc/src/picorv32.v:9153:1: syntax error, unexpected module, expecting IDENTIFIER or randomize
+ 9153 | module picorv32 #(
+      | ^~~~~~
+%Error-ENDLABEL: /openlane/designs/picosoc/src/picorv32.v:15188:11: End label 'q' does not match begin label 'picorv32_wb'
+15188 | endmodule:q
+      |           ^
+%Error: /openlane/designs/picosoc/src/picorv32.v:15189:1: syntax error, unexpected IDENTIFIER
+15189 | e if (wb_rst_i) begin
+      | ^
+%Error: Exiting due to 26 error(s)

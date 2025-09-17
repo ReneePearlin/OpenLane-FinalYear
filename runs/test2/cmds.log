@@ -1,0 +1,24 @@
+Sat Sep 06 14:03:54 UTC 2025 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/picosoc/runs/test2/tmp/layers.list /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef"
+
+Sat Sep 06 14:03:55 UTC 2025 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/picosoc/runs/test2/tmp/merged.nom.lef -i /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Sat Sep 06 14:03:56 UTC 2025 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/picosoc/runs/test2/tmp/merged.min.lef -i /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Sat Sep 06 14:03:56 UTC 2025 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/picosoc/runs/test2/tmp/merged.max.lef -i /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Sat Sep 06 14:03:56 UTC 2025 - Executing "python3 /openlane/scripts/mergeLib.py --output /openlane/designs/picosoc/runs/test2/tmp/synthesis/merged.lib --name sky130A_merged /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Sat Sep 06 14:03:57 UTC 2025 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/picosoc/runs/test2/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/picosoc/runs/test2/tmp/synthesis/trimmed.lib /openlane/designs/picosoc/runs/test2/tmp/synthesis/merged.lib"
+
+Sat Sep 06 14:03:59 UTC 2025 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/picosoc/runs/test2/tmp/cts/cts.lib.exclude.list --output /openlane/designs/picosoc/runs/test2/tmp/cts/cts.lib /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Sat Sep 06 14:04:00 UTC 2025 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/picosoc/runs/test2/tmp/cts/cts-fastest.lib.exclude.list --output /openlane/designs/picosoc/runs/test2/tmp/cts/cts-fastest.lib /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib"
+
+Sat Sep 06 14:04:01 UTC 2025 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/picosoc/runs/test2/tmp/cts/cts-slowest.lib.exclude.list --output /openlane/designs/picosoc/runs/test2/tmp/cts/cts-slowest.lib /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib"
+
+Sat Sep 06 14:04:02 UTC 2025 - Executing "python3 /openlane/scripts/new_tracks.py -i /home/renee/.volare/sky130/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/picosoc/runs/test2/tmp/routing/config.tracks"
+
+Sat Sep 06 14:04:02 UTC 2025 - Executing "echo {OpenLane 413d301090a476f8d34cf24dc2447da17dfab187} > /openlane/designs/picosoc/runs/test2/OPENLANE_COMMIT"
+
+Sat Sep 06 14:04:03 UTC 2025 - Executing "bash -c {verilator  --lint-only  -Wall  --Wno-DECLFILENAME  --top-module pico  /openlane/designs/picosoc/src/spimemio.v /openlane/designs/picosoc/src/picosoc.v /openlane/designs/picosoc/src/ice40up5k_spram.v /openlane/designs/picosoc/src/spiflash.v /openlane/designs/picosoc/src/icebreaker_tb.v /openlane/designs/picosoc/src/simpleuart.v /openlane/designs/picosoc/src/spiflash_tb.v /openlane/designs/picosoc/src/hx8kdemo_tb.v /openlane/designs/picosoc/src/hx8kdemo.v /openlane/designs/picosoc/src/icebreaker.v -Wno-fatal --relative-includes |& tee /openlane/designs/picosoc/runs/test2/logs/synthesis/linter.log /dev/null}"
+

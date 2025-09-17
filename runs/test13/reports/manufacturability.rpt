@@ -1,0 +1,12 @@
+Design Name: picorv32_wrapper
+Run Directory: /openlane/designs/picosoc/runs/test13
+Source not found.
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/picosoc/runs/test13/logs/signoff/picorv32_wrapper.lef.lvs.log
+Source not found.
+----------------------------------------
+
+Antenna Summary:
+No antenna report found.

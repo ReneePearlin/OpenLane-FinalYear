@@ -1,0 +1,12 @@
+Design Name: pico
+Run Directory: /openlane/designs/picosoc/runs/test4
+Source not found.
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/picosoc/runs/test4/logs/signoff/pico.lef.lvs.log
+Source not found.
+----------------------------------------
+
+Antenna Summary:
+No antenna report found.

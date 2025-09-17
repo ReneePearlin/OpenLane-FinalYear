@@ -1,0 +1,100 @@
+Thu Sep 11 05:10:48 UTC 2025 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/picosoc/runs/new2/tmp/layers.list /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef"
+
+Thu Sep 11 05:10:49 UTC 2025 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/picosoc/runs/new2/tmp/merged.nom.lef -i /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Thu Sep 11 05:10:49 UTC 2025 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/picosoc/runs/new2/tmp/merged.min.lef -i /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Thu Sep 11 05:10:49 UTC 2025 - Executing "/openlane/scripts/mergeLef.py -o /openlane/designs/picosoc/runs/new2/tmp/merged.max.lef -i /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef} |& tee /dev/null"
+
+Thu Sep 11 05:10:49 UTC 2025 - Executing "python3 /openlane/scripts/mergeLib.py --output /openlane/designs/picosoc/runs/new2/tmp/synthesis/merged.lib --name sky130A_merged /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Thu Sep 11 05:10:50 UTC 2025 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/picosoc/runs/new2/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/picosoc/runs/new2/tmp/synthesis/trimmed.lib /openlane/designs/picosoc/runs/new2/tmp/synthesis/merged.lib"
+
+Thu Sep 11 05:10:50 UTC 2025 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/picosoc/runs/new2/tmp/cts/cts.lib.exclude.list --output /openlane/designs/picosoc/runs/new2/tmp/cts/cts.lib /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib"
+
+Thu Sep 11 05:10:50 UTC 2025 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/picosoc/runs/new2/tmp/cts/cts-fastest.lib.exclude.list --output /openlane/designs/picosoc/runs/new2/tmp/cts/cts-fastest.lib /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib"
+
+Thu Sep 11 05:10:51 UTC 2025 - Executing "python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/picosoc/runs/new2/tmp/cts/cts-slowest.lib.exclude.list --output /openlane/designs/picosoc/runs/new2/tmp/cts/cts-slowest.lib /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib"
+
+Thu Sep 11 05:10:51 UTC 2025 - Executing "python3 /openlane/scripts/new_tracks.py -i /home/renee/.volare/sky130/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/picosoc/runs/new2/tmp/routing/config.tracks"
+
+Thu Sep 11 05:10:51 UTC 2025 - Executing "echo {OpenLane 413d301090a476f8d34cf24dc2447da17dfab187} > /openlane/designs/picosoc/runs/new2/OPENLANE_COMMIT"
+
+Thu Sep 11 05:10:51 UTC 2025 - Executing "bash -c {verilator  --lint-only  -Wall  --Wno-DECLFILENAME  --top-module picorv32_wrapper  /openlane/designs/picosoc/src/picorv32.v /openlane/designs/picosoc/src/picorv32_wrapper.v -Wno-fatal --relative-includes |& tee /openlane/designs/picosoc/runs/new2/logs/synthesis/linter.log /dev/null}"
+
+Thu Sep 11 05:10:52 UTC 2025 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/renee/.volare/sky130/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/picosoc/runs/new2/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Thu Sep 11 05:10:52 UTC 2025 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /openlane/designs/picosoc/runs/new2/tmp/synthesis/trimmed.lib > /openlane/designs/picosoc/runs/new2/tmp/synthesis/1-trimmed.no_pg.lib"
+
+Thu Sep 11 05:10:52 UTC 2025 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/synthesis/1-synthesis.log"
+
+Thu Sep 11 05:11:14 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/results\/synthesis\/picorv32_wrapper.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 05:11:15 UTC 2025 - Executing "sed -i.bak /defparam/d /openlane/designs/picosoc/runs/new2/results/synthesis/picorv32_wrapper.v"
+
+Thu Sep 11 05:11:15 UTC 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/synthesis/2-sta.log"
+
+Thu Sep 11 05:11:18 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/floorplan/3-initial_fp.log"
+
+Thu Sep 11 05:11:19 UTC 2025 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/defutil.py extract_core_dims --output-data /openlane/designs/picosoc/runs/new2/tmp/dimensions.txt --input-lef /openlane/designs/picosoc/runs/new2/tmp/merged.nom.lef /openlane/designs/picosoc/runs/new2/tmp/floorplan/3-initial_fp.def"
+
+Thu Sep 11 05:11:20 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/ioplacer.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/floorplan/4-io.log"
+
+Thu Sep 11 05:11:21 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/floorplan/5-tap.log"
+
+Thu Sep 11 05:11:22 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/floorplan/6-pdn.log"
+
+Thu Sep 11 05:11:23 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/placement/7-global.log"
+
+Thu Sep 11 05:11:28 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/tmp\/placement\/7-global.nl.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 05:11:28 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/placement/8-gpl_sta.log"
+
+Thu Sep 11 05:11:31 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/placement/9-resizer.log"
+
+Thu Sep 11 05:11:47 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/tmp\/placement\/9-resizer.nl.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 05:11:47 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/placement/10-detailed.log"
+
+Thu Sep 11 05:11:49 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/results\/placement\/picorv32_wrapper.nl.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 05:11:49 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/placement/11-dpl_sta.log"
+
+Thu Sep 11 05:11:53 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/cts/12-cts.log"
+
+Thu Sep 11 05:12:48 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/cts/13-cts_sta.log"
+
+Thu Sep 11 05:12:54 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/cts/14-resizer.log"
+
+Thu Sep 11 05:13:00 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/tmp\/cts\/14-picorv32_wrapper.resized.nl.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 05:13:01 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/15-resizer_design.log"
+
+Thu Sep 11 05:22:10 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/tmp\/15-picorv32_wrapper.nl.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 05:22:11 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/16-rsz_design_sta.log"
+
+Thu Sep 11 05:22:17 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/17-resizer_timing.log"
+
+Thu Sep 11 05:26:08 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/tmp\/17-picorv32_wrapper.nl.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 05:26:08 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/18-rsz_timing_sta.log"
+
+Thu Sep 11 05:26:14 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/groute.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/19-global.log"
+
+Thu Sep 11 05:54:56 UTC 2025 - Executing "openroad -exit -no_init -python /openlane/scripts/odbpy/defutil.py replace_instance_prefixes --original-prefix ANTENNA --new-prefix INSDIODE1 --input-lef /openlane/designs/picosoc/runs/new2/tmp/merged.nom.lef --output-def /openlane/designs/picosoc/runs/new2/tmp/17-picorv32_wrapper.def --output /openlane/designs/picosoc/runs/new2/tmp/17-picorv32_wrapper.odb /openlane/designs/picosoc/runs/new2/tmp/17-picorv32_wrapper.odb |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/19-antenna_diodes_1.log"
+
+Thu Sep 11 05:54:57 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/groute.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/19-antenna_route_1.log"
+
+Thu Sep 11 08:30:04 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/19-global_write_netlist.log"
+
+Thu Sep 11 08:30:08 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/tmp\/routing\/global.nl.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 08:30:09 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/21-grt_sta.log"
+
+Thu Sep 11 08:30:28 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/fill.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/22-fill.log"
+
+Thu Sep 11 08:30:33 UTC 2025 - Executing "sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/picosoc\/runs\/new2\/tmp\/routing\/22-fill.nl.v/} /openlane/designs/picosoc/runs/new2/config.tcl"
+
+Thu Sep 11 08:30:34 UTC 2025 - Executing "openroad -exit /openlane/scripts/openroad/droute.tcl |& tee /dev/null /openlane/designs/picosoc/runs/new2/logs/routing/23-detailed.log"
+

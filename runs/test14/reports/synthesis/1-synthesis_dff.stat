@@ -1,0 +1,25 @@
+
+55. Printing statistics.
+
+=== picorv32_wrapper ===
+
+   Number of wires:               7887
+   Number of wire bits:          10000
+   Number of public wires:         130
+   Number of public wire bits:    1799
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               9742
+     $_ANDNOT_                    1169
+     $_AND_                        391
+     $_MUX_                       4413
+     $_NAND_                       220
+     $_NOR_                        198
+     $_NOT_                        118
+     $_ORNOT_                      150
+     $_OR_                        1015
+     $_XNOR_                        99
+     $_XOR_                        372
+     sky130_fd_sc_hd__dfxtp_2     1597
+

@@ -1,0 +1,85 @@
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'trap'
+  146 |  ) cpu (
+      |    ^~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.009
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'mem_la_read'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'mem_la_write'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'mem_la_addr'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'mem_la_wdata'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'mem_la_wstrb'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'pcpi_valid'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'pcpi_insn'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'pcpi_rs1'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'pcpi_rs2'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'pcpi_wr'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'pcpi_rd'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'pcpi_wait'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'pcpi_ready'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'eoi'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'trace_valid'
+  146 |  ) cpu (
+      |    ^~~
+%Warning-PINMISSING: /openlane/designs/picosoc/src/picosoc.v:146:4: Cell has missing pin: 'trace_data'
+  146 |  ) cpu (
+      |    ^~~
+%Error: Specified --top-module 'pico' was not found in design.
+%Warning-TIMESCALEMOD: /openlane/designs/picosoc/src/spimemio.v:20:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   20 | module spimemio (
+      |        ^~~~~~~~
+                       /openlane/designs/picosoc/src/picorv32.v:62:8: ... Location of module with timescale
+   62 | module picorv32 #(
+      |        ^~~~~~~~
+%Warning-TIMESCALEMOD: /openlane/designs/picosoc/src/spimemio.v:378:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  378 | module spimemio_xfer (
+      |        ^~~~~~~~~~~~~
+                       /openlane/designs/picosoc/src/picorv32.v:62:8: ... Location of module with timescale
+   62 | module picorv32 #(
+      |        ^~~~~~~~
+%Warning-TIMESCALEMOD: /openlane/designs/picosoc/src/picosoc.v:36:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+   36 | module picosoc (
+      |        ^~~~~~~
+                       /openlane/designs/picosoc/src/picorv32.v:62:8: ... Location of module with timescale
+   62 | module picorv32 #(
+      |        ^~~~~~~~
+%Warning-TIMESCALEMOD: /openlane/designs/picosoc/src/picosoc.v:225:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  225 | module picosoc_regs (
+      |        ^~~~~~~~~~~~
+                       /openlane/designs/picosoc/src/picorv32.v:62:8: ... Location of module with timescale
+   62 | module picorv32 #(
+      |        ^~~~~~~~
+%Warning-TIMESCALEMOD: /openlane/designs/picosoc/src/picosoc.v:243:8: Timescale missing on this module as other modules have it (IEEE 1800-2017 3.14.2.3)
+  243 | module picosoc_mem #(
+      |        ^~~~~~~~~~~
+                       /openlane/designs/picosoc/src/picorv32.v:62:8: ... Location of module with timescale
+   62 | module picorv32 #(
+      |        ^~~~~~~~
+%Error: Exiting due to 1 error(s)

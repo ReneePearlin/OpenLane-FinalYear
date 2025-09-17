@@ -1,0 +1,1 @@
+Error: multi_corner.tcl, 149 can't read "::env(CLOCK_PORT)": no such variable

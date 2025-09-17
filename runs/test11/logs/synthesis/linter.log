@@ -1,0 +1,4 @@
+%Error: /openlane/designs/picosoc/src/picorv32.v:6:1: syntax error, unexpected IDENTIFIER
+    6 | picorv32 cpu (
+      | ^~~~~~~~
+%Error: Exiting due to 1 error(s)
