@@ -20,13 +20,13 @@ jobs:
 
       - name: Run OpenLane inside Docker
         env:
-          DESIGN: my_project   # <--- Change this if your design folder has a different name
+          DESIGN: my_project
         run: |
           IMAGE="efabless/openlane:latest"
           docker pull $IMAGE
           echo "Using image: $IMAGE"
 
           docker run --rm \
-            -v "${{ github.workspace }}":/openlane/designs \
+            -v "${{ github.workspace }}":/openlane \
             $IMAGE \
-            bash -lc "cd /openlane && ./flow.tcl -design designs/${DESIGN}"
+            bash -lc "./flow.tcl -design ${DESIGN}"
